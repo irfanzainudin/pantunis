@@ -8,6 +8,8 @@ import Sumber from "./pages/Sumber";
 import PasukanKami from "./pages/PasukanKami";
 import HubungiKami from "./pages/HubungiKami";
 import Sasaran from "./pages/Sasaran";
+import HalamanHilang from "./pages/HalamanHilang";
+import TerokaKategori from "./pages/TerokaKategori";
 
 function App() {
   return (
@@ -19,10 +21,12 @@ function App() {
         <Route path="/" element={<HalamanUtama />} />
         <Route path="/halaman-utama" element={<HalamanUtama />} />
         <Route path="/teroka" element={<Teroka />} />
+        <Route path="/teroka/:nama_kategori" element={<TerokaKategori />} />
         <Route path="/sumber" element={<Sumber />} />
         <Route path="/pasukan-kami" element={<PasukanKami />} />
         <Route path="/hubungi-kami" element={<HubungiKami />} />
         <Route path="/sasaran" element={<Sasaran />} />
+        <Route path="/*" element={<HalamanHilang />} />
       </Routes>
       <Footer />
     </div>
