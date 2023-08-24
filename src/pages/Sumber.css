@@ -1,0 +1,11 @@
+.sumber-sumber {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sumber {
+  max-width: 40vw;
+  margin: 20px;
+}
