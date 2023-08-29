@@ -84,6 +84,11 @@ function Navbar() {
                     Sasaran
                   </Link>
                 </li>
+                <li>
+                  <Link className="dropdown-item" to="/current-progress">
+                    Current Progress
+                  </Link>
+                </li>
               </ul>
             </li>
           </ul>
