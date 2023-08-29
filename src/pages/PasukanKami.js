@@ -14,7 +14,7 @@ function PasukanKami() {
       </s>
       <ul className="nav justify-content-center list-unstyled d-flex">
         <li className="ms-3">
-          <a className="text-muted" href="/">
+          <a className="text-muted" href="https://twitter.com/irfan__zainudin">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
