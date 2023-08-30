@@ -67,19 +67,6 @@ function Navbar() {
               </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <Link className="dropdown-item" to="/pasukan-kami">
-                    Pasukan Kami
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="/hubungi-kami">
-                    Hubungi Kami
-                  </Link>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
                   <Link className="dropdown-item" to="/sasaran">
                     Sasaran
                   </Link>
@@ -87,6 +74,19 @@ function Navbar() {
                 <li>
                   <Link className="dropdown-item" to="/current-progress">
                     Current Progress
+                  </Link>
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/pasukan-kami">
+                    Pasukan Kami
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/hubungi-kami">
+                    Hubungi Kami
                   </Link>
                 </li>
               </ul>
