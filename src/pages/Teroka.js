@@ -24,7 +24,9 @@ const kategori = [
 
 function Teroka() {
   return (
-    <main className="App-main">
+    <main>
+      <h1>Teroka</h1>
+      <p>🚧 Under Construction 🚧</p>
       <div className="kategori-kategori">
         {kategori.length > 0
           ? kategori.map((nama_kategori) => {
