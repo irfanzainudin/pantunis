@@ -7,7 +7,7 @@ function Sasaran() {
         {/* <h1>Sasaran</h1>
         <p>🚧 Under Construction 🚧</p> */}
         <span>
-          <big>
+          <big id="sasaran">
             <b>1 juta</b>
           </big>{" "}
           <p>pantun dalam pangkalan data</p>
