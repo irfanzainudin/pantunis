@@ -4,6 +4,7 @@ function KadSumber({ tajuk, penulis, pautan, imej }) {
   const sumber_info = {
     tajuk: tajuk,
     penulis: penulis,
+    pautan: pautan,
     imej: imej,
   };
   return (

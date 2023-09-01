@@ -2,12 +2,6 @@ import "./Sumber.css";
 import KadSumber from "../components/KadSumber";
 
 const sumber_sumber = [
-  // {
-  //   tajuk: "",
-  //   penulis: "",
-  //   pautan: "",
-  //   imej: ""
-  // },
   {
     tajuk: "Pantun Melayu",
     penulis: "Richard J. Wilkinson and Sir R.O. Winstedt",
@@ -28,92 +22,14 @@ const sumber_sumber = [
     pautan: "https://dbpniaga.my/Inventori/Detail_Inventori?i=MzM1",
     imej: "https://dbpniaga.my/ShowImage.ashx?typic=3&pathPic=0&idxPic=1074",
   },
-  {
-    tajuk: "Alam Pantun Melayu: Studies on the Malay Pantun",
-    penulis: "Francois-Rene Daillie",
-    pautan:
-      "https://www.nutmegpublishing.com/books/other-books/alam-pantun-melayu.html",
-    imej: "https://www.nutmegpublishing.com/img/other-books/alam-pantun.jpg",
-  },
-  {
-    tajuk: "KUMPULAN PANTUN LISAN MELAYU: KURIK KUNDI MERAH SAGA EDISI KEDUA",
-    penulis: "Dewan Bahasa Dan Pustaka",
-    pautan: "https://dbpniaga.my/Inventori/Detail_Inventori?i=MzM1",
-    imej: "https://dbpniaga.my/ShowImage.ashx?typic=3&pathPic=0&idxPic=1074",
-  },
-  {
-    tajuk: "Alam Pantun Melayu: Studies on the Malay Pantun",
-    penulis: "Francois-Rene Daillie",
-    pautan:
-      "https://www.nutmegpublishing.com/books/other-books/alam-pantun-melayu.html",
-    imej: "https://www.nutmegpublishing.com/img/other-books/alam-pantun.jpg",
-  },
-  {
-    tajuk: "KUMPULAN PANTUN LISAN MELAYU: KURIK KUNDI MERAH SAGA EDISI KEDUA",
-    penulis: "Dewan Bahasa Dan Pustaka",
-    pautan: "https://dbpniaga.my/Inventori/Detail_Inventori?i=MzM1",
-    imej: "https://dbpniaga.my/ShowImage.ashx?typic=3&pathPic=0&idxPic=1074",
-  },
-  {
-    tajuk: "Alam Pantun Melayu: Studies on the Malay Pantun",
-    penulis: "Francois-Rene Daillie",
-    pautan:
-      "https://www.nutmegpublishing.com/books/other-books/alam-pantun-melayu.html",
-    imej: "https://www.nutmegpublishing.com/img/other-books/alam-pantun.jpg",
-  },
-  {
-    tajuk: "KUMPULAN PANTUN LISAN MELAYU: KURIK KUNDI MERAH SAGA EDISI KEDUA",
-    penulis: "Dewan Bahasa Dan Pustaka",
-    pautan: "https://dbpniaga.my/Inventori/Detail_Inventori?i=MzM1",
-    imej: "https://dbpniaga.my/ShowImage.ashx?typic=3&pathPic=0&idxPic=1074",
-  },
-  {
-    tajuk: "Alam Pantun Melayu: Studies on the Malay Pantun",
-    penulis: "Francois-Rene Daillie",
-    pautan:
-      "https://www.nutmegpublishing.com/books/other-books/alam-pantun-melayu.html",
-    imej: "https://www.nutmegpublishing.com/img/other-books/alam-pantun.jpg",
-  },
-  {
-    tajuk: "KUMPULAN PANTUN LISAN MELAYU: KURIK KUNDI MERAH SAGA EDISI KEDUA",
-    penulis: "Dewan Bahasa Dan Pustaka",
-    pautan: "https://dbpniaga.my/Inventori/Detail_Inventori?i=MzM1",
-    imej: "https://dbpniaga.my/ShowImage.ashx?typic=3&pathPic=0&idxPic=1074",
-  },
-  {
-    tajuk: "Alam Pantun Melayu: Studies on the Malay Pantun",
-    penulis: "Francois-Rene Daillie",
-    pautan:
-      "https://www.nutmegpublishing.com/books/other-books/alam-pantun-melayu.html",
-    imej: "https://www.nutmegpublishing.com/img/other-books/alam-pantun.jpg",
-  },
-  {
-    tajuk: "KUMPULAN PANTUN LISAN MELAYU: KURIK KUNDI MERAH SAGA EDISI KEDUA",
-    penulis: "Dewan Bahasa Dan Pustaka",
-    pautan: "https://dbpniaga.my/Inventori/Detail_Inventori?i=MzM1",
-    imej: "https://dbpniaga.my/ShowImage.ashx?typic=3&pathPic=0&idxPic=1074",
-  },
-  {
-    tajuk: "Alam Pantun Melayu: Studies on the Malay Pantun",
-    penulis: "Francois-Rene Daillie",
-    pautan:
-      "https://www.nutmegpublishing.com/books/other-books/alam-pantun-melayu.html",
-    imej: "https://www.nutmegpublishing.com/img/other-books/alam-pantun.jpg",
-  },
-  {
-    tajuk: "KUMPULAN PANTUN LISAN MELAYU: KURIK KUNDI MERAH SAGA EDISI KEDUA",
-    penulis: "Dewan Bahasa Dan Pustaka",
-    pautan: "https://dbpniaga.my/Inventori/Detail_Inventori?i=MzM1",
-    imej: "https://dbpniaga.my/ShowImage.ashx?typic=3&pathPic=0&idxPic=1074",
-  },
 ];
 
 function Sumber() {
   return (
     <main>
       <div>
-        <h1>Sumber</h1>
-        <p>🚧 Under Construction 🚧</p>
+        {/* <h1>Sumber</h1>
+        <p>🚧 Under Construction 🚧</p> */}
         <div className="sumber-sumber">
           {sumber_sumber.length > 0
             ? sumber_sumber.map((ss) => {

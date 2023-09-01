@@ -23,3 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 How\ to\ Deploy\ a\ ReactJS\ Web\ Application\ on\ DigitalOcean\ by\ Żimuzo\ Obiechina\ Medium.pdf
+
+# docker -- temporary
+.dockerignore
+compose.yaml
+Dockerfile

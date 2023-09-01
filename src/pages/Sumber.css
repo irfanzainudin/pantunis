@@ -12,4 +12,17 @@
 
 .imej-sumber {
   width: 15%;
+  border: solid 1px black;
+  margin-top: 2rem;
+}
+
+.tajuk-penulis {
+  margin-top: 2rem;
+}
+
+.lsgr-container {
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
 }
