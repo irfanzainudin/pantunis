@@ -1,0 +1,22 @@
+.pantun-pantun {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pantun {
+  width: 25vw;
+  height: 15vh;
+  margin: 20px;
+  padding: 10px;
+  border-left: solid 1px black;
+  display: flex;
+  align-items: center;
+}
+
+.pantun-span {
+  text-align: left;
+  line-height: 5px;
+}
