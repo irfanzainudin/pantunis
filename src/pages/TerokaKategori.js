@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Pantun from "../components/Pantun";
 
@@ -15,6 +16,12 @@ const pantun = [
 
 function TerokaKategori() {
   const { nama_kategori } = useParams();
+  const [filteredPantun, setFilteredPantun] = useState("");
+
+  const handleChange = (e) => {
+    setFilteredPantun(e.target.value);
+  };
+
   return (
     <main>
       {/* <h1>Teroka Kategori {nama_kategori}</h1> */}
@@ -30,6 +37,7 @@ function TerokaKategori() {
             id="cari"
             aria-describedby="cari"
             autoFocus
+            onChange={handleChange}
           />
           <div id="cari" className="form-text">
             Saring pantun guna perkataan.
@@ -39,7 +47,11 @@ function TerokaKategori() {
       <div className="pantun-pantun">
         {pantun.length > 0
           ? pantun.map((p) => {
-              return <Pantun>{p}</Pantun>;
+              if (p.toLowerCase().includes(filteredPantun)) {
+                return <Pantun>{p}</Pantun>;
+              } else {
+                return <></>;
+              }
             })
           : ""}
       </div>
