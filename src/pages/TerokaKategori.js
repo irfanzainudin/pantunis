@@ -1,26 +1,55 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Pantun from "../components/Pantun";
+import axios from "axios";
 
-const pantun = [
-  "Siakap senohong gelama ikan duri, Bercakap bohong lama-lama mencuri",
-  "Dua tiga kucing berlari, Mana nak sama si kucing belang, Dua tiga boleh ku cari, Mana nak sama si adik seorang.",
-  "Buah cempedak luar pagar, Ambil galah tolong jolokkan, Saya budak baru belajar, Kalau salah tolong tunjukkan",
-  "Siakap senohong gelama ikan duri, Bercakap bohong lama-lama mencuri",
-  "Dua tiga kucing berlari, Mana nak sama si kucing belang, Dua tiga boleh ku cari, Mana nak sama si adik seorang.",
-  "Ada beras taruh dalam padi, Ada ingat taruh dalam hati",
-  "Siakap senohong gelama ikan duri, Bercakap bohong lama-lama mencuri",
-  "Gaharu, cengal, giam, Tak tahu, tak kenal, diam",
-  "Buah cempedak luar pagar, Ambil galah tolong jolokkan, Saya budak baru belajar, Kalau salah tolong tunjukkan",
-];
+// const pantun = [
+//   "Siakap senohong gelama ikan duri, Bercakap bohong lama-lama mencuri",
+//   "Dua tiga kucing berlari, Mana nak sama si kucing belang, Dua tiga boleh ku cari, Mana nak sama si adik seorang.",
+//   "Buah cempedak luar pagar, Ambil galah tolong jolokkan, Saya budak baru belajar, Kalau salah tolong tunjukkan",
+//   "Siakap senohong gelama ikan duri, Bercakap bohong lama-lama mencuri",
+//   "Dua tiga kucing berlari, Mana nak sama si kucing belang, Dua tiga boleh ku cari, Mana nak sama si adik seorang.",
+//   "Ada beras taruh dalam padi, Ada ingat taruh dalam hati",
+//   "Siakap senohong gelama ikan duri, Bercakap bohong lama-lama mencuri",
+//   "Gaharu, cengal, giam, Tak tahu, tak kenal, diam",
+//   "Buah cempedak luar pagar, Ambil galah tolong jolokkan, Saya budak baru belajar, Kalau salah tolong tunjukkan",
+// ];
 
 function TerokaKategori() {
   const { nama_kategori } = useParams();
   const [filteredPantun, setFilteredPantun] = useState("");
+  const [pantun, setPantun] = useState("");
+  const [bayang1, setBayang1] = useState("");
+  const [bayang2, setBayang2] = useState("");
+  const [maksud1, setMaksud1] = useState("");
+  const [maksud2, setMaksud2] = useState("");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchPantun();
+  }, []);
+
+  const fetchPantun = async () => {
+    // Send GET request to 'pantun/semua' endpoint
+    axios
+      .get("http://localhost:4001/pantun/semua")
+      .then((response) => {
+        // Update the pantun state
+        setPantun(response.data);
+
+        // Update loading state
+        setLoading(false);
+      })
+      .catch((error) =>
+        console.error(`There was an error retrieving the pantun list: ${error}`)
+      );
+  };
 
   const handleChange = (e) => {
     setFilteredPantun(e.target.value);
   };
+
+  if (loading) return <p>Pantun table is loading...</p>;
 
   return (
     <main>
@@ -47,7 +76,12 @@ function TerokaKategori() {
       <div className="pantun-pantun">
         {pantun.length > 0
           ? pantun.map((p) => {
-              if (p.toLowerCase().includes(filteredPantun)) {
+              const filterCheck =
+                p.bayang1.toLowerCase().includes(filteredPantun) ||
+                p.bayang2.toLowerCase().includes(filteredPantun) ||
+                p.maksud1.toLowerCase().includes(filteredPantun) ||
+                p.maksud2.toLowerCase().includes(filteredPantun);
+              if (filterCheck) {
                 return <Pantun>{p}</Pantun>;
               } else {
                 return <></>;
