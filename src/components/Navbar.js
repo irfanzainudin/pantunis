@@ -84,11 +84,12 @@ function Navbar() {
                     Pasukan Kami
                   </Link>
                 </li>
-                <li>
+                {/* TODO: get an workspace (email, domain etc.) first, then setup a "Contact Us" page */}
+                {/* <li>
                   <Link className="dropdown-item" to="/hubungi-kami">
                     Hubungi Kami
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </li>
           </ul>
