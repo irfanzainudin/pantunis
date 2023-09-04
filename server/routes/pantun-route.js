@@ -14,6 +14,10 @@ const router = express.Router();
 // this means that '/semua' translates to '/pantun/semua'
 router.get("/semua", pantunRoutes.semuaPantun);
 
+router.get("/cariGunaId", pantunRoutes.cariPantunGunaId);
+
+router.get("/cariGunaKata", pantunRoutes.cariPantunGunaKata);
+
 // Add route for POST request to create new pantun
 // In server.js, pantun route is specified as '/pantun'
 // this means that '/cipta' translates to '/pantun/cipta'

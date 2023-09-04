@@ -21,10 +21,31 @@ exports.semuaPantun = async (req, res) => {
 };
 
 // Retrieve specific pantun
-exports.cariPantun = async (req, res) => {
+exports.cariPantunGunaId = async (req, res) => {
   // Find specific pantun in the database
   knex("pantun")
     .where("id", req.body.id) // find correct record based on id
+    .then(() => {
+      // Send the specific extracted pantun from database in response
+      res.json(userData);
+    })
+    .catch((err) => {
+      // Send a error message in response
+      res.json({
+        message: `There was an error retrieving pantun ${req.body.id}: ${err}`,
+      });
+    });
+};
+
+// Retrieve specific pantun
+exports.cariPantunGunaKata = async (req, res) => {
+  // Find specific pantun in the database
+  knex("pantun")
+    .select("*")
+    .whereILike("bayang1", "%" + req.body.kata + "%")
+    .orWhereILike("bayang2", "%" + req.body.kata + "%")
+    .orWhereILike("maksud1", "%" + req.body.kata + "%")
+    .orWhereILike("maksud2", "%" + req.body.kata + "%")
     .then(() => {
       // Send the specific extracted pantun from database in response
       res.json(userData);
