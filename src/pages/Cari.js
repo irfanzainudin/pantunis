@@ -13,6 +13,8 @@ function Cari() {
 
   useEffect(() => {
     handleSubmit();
+    // NOTE: the line below is for my annoying linter (I don't like warnings)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleChange = (e) => {
