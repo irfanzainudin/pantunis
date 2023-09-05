@@ -9,7 +9,7 @@ exports.semuaPantun = async (req, res) => {
   // Get all pantun from database
   knex
     .select("*") // select all records
-    .from("pantun") // from 'books' table
+    .from("pantun") // from 'pantun' table
     .then((userData) => {
       // Send extracted pantun from database in response
       res.json(userData);
@@ -60,7 +60,7 @@ exports.cariPantunGunaKata = async (req, res) => {
     });
 };
 
-// Create new book
+// Create new pantun
 exports.ciptaPantun = async (req, res) => {
   // Add new pantun to database
   knex("pantun")

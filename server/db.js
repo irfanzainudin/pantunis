@@ -16,18 +16,18 @@ const knex = require("knex")({
   useNullAsDefault: true,
 });
 
-// Create a table in the database called "books"
+// Create a table in the database called "pantun"
 knex.schema
-  // Make sure no "books" table exists
+  // Make sure no "pantun" table exists
   // before trying to create new
   .hasTable("pantun")
   .then((exists) => {
     if (!exists) {
-      // If no "books" table exists
-      // create new, with "id", "author", "title",
-      // "pubDate" and "rating" columns
+      // If no "pantun" table exists
+      // create new, with "id", "bayang1", "bayang2",
+      // "maksud1" and "maksud2" columns
       // and use "id" as a primary identification
-      // and increment "id" with every new record (book)
+      // and increment "id" with every new record (pantun)
       return knex.schema
         .createTable("pantun", (table) => {
           table.increments("id").primary();
@@ -54,11 +54,12 @@ knex.schema
   });
 
 // Just for debugging purposes:
-// Log all data in "books" table
+// Log all data in "pantun" table
 knex
   .select("*")
   .from("pantun")
-  .then((data) => console.log("data:", data))
+  // .then((data) => console.log("data:", data)) // NOTE: keeping my dev server's log clean
+  .then(() => {})
   .catch((err) => console.log(err));
 
 // Export the database
