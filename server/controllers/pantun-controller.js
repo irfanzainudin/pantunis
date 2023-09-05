@@ -2,7 +2,7 @@
 // Modified from: https://github.com/alexdevero/bookshelf-react-express-sqlite-app/blob/master/server/controllers/books-controller.js
 
 // Import database
-const knex = require("./../db");
+const knex = require("../db");
 
 // Retrieve all pantun
 exports.semuaPantun = async (req, res) => {
@@ -25,9 +25,9 @@ exports.cariPantunGunaId = async (req, res) => {
   // Find specific pantun in the database
   knex("pantun")
     .where("id", req.body.id) // find correct record based on id
-    .then(() => {
+    .then((response) => {
       // Send the specific extracted pantun from database in response
-      res.json(userData);
+      res.json(response);
     })
     .catch((err) => {
       // Send a error message in response
@@ -42,18 +42,20 @@ exports.cariPantunGunaKata = async (req, res) => {
   // Find specific pantun in the database
   knex("pantun")
     .select("*")
-    .whereILike("bayang1", "%" + req.body.kata + "%")
-    .orWhereILike("bayang2", "%" + req.body.kata + "%")
-    .orWhereILike("maksud1", "%" + req.body.kata + "%")
-    .orWhereILike("maksud2", "%" + req.body.kata + "%")
-    .then(() => {
+    // NOTE: orWhereILike() doesn't work for SQLite since SQLite is case-insensitive by default: https://github.com/sequelize/sequelize/issues/4384#issuecomment-134217570
+    // NOTE: need to use req.query for URLs like "?kata=<KATA>": https://stackoverflow.com/questions/20089582/how-to-get-a-url-parameter-in-express
+    .whereLike("bayang1", "%" + req.query.kata + "%")
+    .orWhereLike("bayang2", "%" + req.query.kata + "%")
+    .orWhereLike("maksud1", "%" + req.query.kata + "%")
+    .orWhereLike("maksud2", "%" + req.query.kata + "%")
+    .then((response) => {
       // Send the specific extracted pantun from database in response
-      res.json(userData);
+      res.json(response);
     })
     .catch((err) => {
       // Send a error message in response
       res.json({
-        message: `There was an error retrieving pantun ${req.body.id}: ${err}`,
+        message: `There was an error retrieving pantun ${req.query.kata}: ${err}`,
       });
     });
 };
