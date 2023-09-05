@@ -1,0 +1,21 @@
+.cari-kontena {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tiada-pantun-kontena {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cari-form {
+  margin: 0 2rem;
+}
+
+.tiada-pantun-teks {
+  color: var(--bs-border-color-translucent);
+}
