@@ -44,25 +44,25 @@ function Cari() {
     <main className="cari-kontena">
       <h1 className="my-3">{kata}</h1>
       <form method="GET">
-        <div class="row g-3 align-items-center mb-3">
-          <div class="col-auto">
-            <label for="kata" class="col-form-label">
+        <div className="row g-3 align-items-center mb-3">
+          <div className="col-auto">
+            <label htmlFor="kata" className="col-form-label">
               Cari pantun:
             </label>
           </div>
-          <div class="col-auto">
+          <div className="col-auto">
             <input
               type="text"
               id="kata"
               name="kata"
-              class="form-control"
+              className="form-control"
               aria-describedby="cariPantunHelp"
               autoFocus
               onChange={handleChange}
             />
           </div>
-          <div class="col-auto">
-            <span id="cariPantunHelp" class="form-text">
+          <div className="col-auto">
+            <span id="cariPantunHelp" className="form-text">
               Tekan 'Enter' untuk cari.
             </span>
           </div>
@@ -71,7 +71,7 @@ function Cari() {
       <div className="pantun-pantun">
         {pantun.length > 0
           ? pantun.map((p) => {
-              return <Pantun>{p}</Pantun>;
+              return <Pantun kata={kata}>{p}</Pantun>;
             })
           : ""}
       </div>
@@ -80,25 +80,25 @@ function Cari() {
     <main className="tiada-pantun-kontena">
       <h1 className="my-3">{kata}</h1>
       <form method="GET">
-        <div class="row g-3 align-items-center mb-3">
-          <div class="col-auto">
-            <label for="kata" class="col-form-label">
+        <div className="row g-3 align-items-center mb-3">
+          <div className="col-auto">
+            <label htmlFor="kata" className="col-form-label">
               Cari pantun:
             </label>
           </div>
-          <div class="col-auto">
+          <div className="col-auto">
             <input
               type="text"
               id="kata"
               name="kata"
-              class="form-control"
+              className="form-control"
               aria-describedby="cariPantunHelp"
               autoFocus
               onChange={handleChange}
             />
           </div>
-          <div class="col-auto">
-            <span id="cariPantunHelp" class="form-text">
+          <div className="col-auto">
+            <span id="cariPantunHelp" className="form-text">
               Tekan 'Enter' untuk cari.
             </span>
           </div>
