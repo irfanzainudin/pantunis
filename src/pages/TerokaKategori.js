@@ -19,10 +19,6 @@ function TerokaKategori() {
   const { nama_kategori } = useParams();
   const [filteredPantun, setFilteredPantun] = useState("");
   const [pantun, setPantun] = useState("");
-  const [bayang1, setBayang1] = useState("");
-  const [bayang2, setBayang2] = useState("");
-  const [maksud1, setMaksud1] = useState("");
-  const [maksud2, setMaksud2] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

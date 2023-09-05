@@ -3,7 +3,7 @@
 // Import express
 const express = require("express");
 
-// Import books-controller
+// Import pantun-controller
 const pantunRoutes = require("./../controllers/pantun-controller.js");
 
 // Create router
