@@ -5,84 +5,39 @@ function Pantun(props) {
   const pantun = props.children;
   const kata = props.kata;
   const [barisan, setBarisan] = useState([]);
+  let temp = [];
 
   useEffect(() => {
+    // TODO: useEffect() runs on every render cycle -- meaning if there are changes to the UI, then useEffect() will run (at least that's what I think it means) -- so changing the lines of the pantun to highlight the search word will cause useEffect() -- hence prosesPantun() -- to run twice and the lines will be printed twice (at least that's what I think is happening)
     prosesPantun();
   }, []);
 
   const prosesPantun = () => {
-    const temp = [];
-    const bayang1 = pantun.bayang1.toLowerCase();
-    const bayang2 = pantun.bayang2.toLowerCase();
-    const maksud1 = pantun.maksud1.toLowerCase();
-    const maksud2 = pantun.maksud2.toLowerCase();
+    const bayang1 = pantun.bayang1.split(" ");
+    const bayang2 = pantun.bayang2.split(" ");
+    const maksud1 = pantun.maksud1.split(" ");
+    const maksud2 = pantun.maksud2.split(" ");
+
     // Find out which lines have `kata` in them
-    if (bayang1.includes(kata)) {
-      const spl = bayang1.split(kata);
-      const str = spl.join('<span class="tanda">' + kata + "</span>");
-      const p_line = {
-        __html: str.charAt(0).toUpperCase() + str.slice(1),
-      };
-      temp.push(p_line);
-      setBarisan(temp);
-    } else {
-      temp.push(pantun.bayang1);
-      setBarisan(temp);
-    }
+    prosesBarisPantun(bayang1);
+    // prosesBarisPantun(bayang2);
+    // prosesBarisPantun(maksud1);
+    // prosesBarisPantun(maksud2);
+  };
 
-    if (bayang2.includes(kata)) {
-      const spl = bayang2.split(kata);
-      const str = spl.join('<span class="tanda">' + kata + "</span>");
-      const p_line = {
-        __html:
-          "&nbsp;&nbsp;&nbsp;&nbsp;" +
-          str.charAt(0).toUpperCase() +
-          str.slice(1),
-      };
-      temp.push(p_line);
-      setBarisan(temp);
-    } else {
-      temp.push(pantun.bayang2);
-      setBarisan(temp);
-    }
-
-    if (maksud1.includes(kata)) {
-      const spl = maksud1.split(kata);
-      const str = spl.join('<span class="tanda">' + kata + "</span>");
-      const p_line = {
-        __html: str.charAt(0).toUpperCase() + str.slice(1),
-      };
-      temp.push(p_line);
-      setBarisan(temp);
-    } else {
-      temp.push(pantun.maksud1);
-      setBarisan(temp);
-    }
-
-    if (maksud2.includes(kata)) {
-      const spl = maksud2.split(kata);
-      const str = spl.join('<span class="tanda">' + kata + "</span>");
-      const p_line = {
-        __html:
-          "&nbsp;&nbsp;&nbsp;&nbsp;" +
-          str.charAt(0).toUpperCase() +
-          str.slice(1),
-      };
-      temp.push(p_line);
-      setBarisan(temp);
-    } else {
-      temp.push(pantun.maksud2);
-      setBarisan(temp);
-    }
-
-    // Highlight the part of the lines that corresponds to `kata`
-    // barisan.map((line) => {
-    //   const spl = line.split(kata);
-    //   const p_line = {
-    //     __html: spl.join('<span class="tanda">' + kata + "</span>"),
-    //   };
-    //   setPosisiKata(p_line);
-    // });
+  const prosesBarisPantun = (baris) => {
+    baris.map((word) => {
+      if (word.toLowerCase().includes(kata)) {
+        const i = baris.indexOf(word);
+        // TODO: punctuations (semicolons, commas etc.) are highlighted as well, which could maybe affect UX
+        baris[i] = '<span class="tanda">' + word + "</span>";
+        const p_line = {
+          __html: baris.join(" "),
+        };
+        temp.push(p_line);
+        setBarisan(temp);
+      }
+    });
   };
 
   function isObject(obj) {
@@ -110,6 +65,7 @@ function Pantun(props) {
   return (
     <div className="pantun">
       <span className="pantun-span">
+        {/* {console.log(barisan)} */}
         {barisan.length > 0
           ? barisan.map((baris, i) => {
               if (isObject(baris)) {
