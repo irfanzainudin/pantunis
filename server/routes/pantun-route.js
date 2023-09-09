@@ -14,6 +14,8 @@ const router = express.Router();
 // this means that '/semua' translates to '/pantun/semua'
 router.get("/semua", pantunRoutes.semuaPantun);
 
+router.get("/jumlah", pantunRoutes.jumlahPantun);
+
 router.get("/cariGunaId", pantunRoutes.cariPantunGunaId);
 
 router.get("/cariGunaKata", pantunRoutes.cariPantunGunaKata);

@@ -20,6 +20,22 @@ exports.semuaPantun = async (req, res) => {
     });
 };
 
+// Retrieve all pantun
+exports.jumlahPantun = async (req, res) => {
+  // Get all pantun from database
+  knex
+    .count("*")
+    .from("pantun") // from 'pantun' table
+    .then((userData) => {
+      // Send extracted pantun from database in response
+      res.json(userData);
+    })
+    .catch((err) => {
+      // Send a error message in response
+      res.json({ message: `There was an error counting pantun: ${err}` });
+    });
+};
+
 // Retrieve specific pantun
 exports.cariPantunGunaId = async (req, res) => {
   // Find specific pantun in the database
