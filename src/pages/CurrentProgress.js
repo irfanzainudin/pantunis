@@ -5,6 +5,7 @@ function CurrentProgress() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    // TODO: make it real-time
     fetchCount();
   }, []);
 
