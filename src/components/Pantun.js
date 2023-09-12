@@ -28,6 +28,8 @@ function Pantun(props) {
         <p>&nbsp;&nbsp;&nbsp;&nbsp;{pantun.bayang2}</p>
         <p>{pantun.maksud1}</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;{pantun.maksud2}</p>
+        <span class="badge rounded-pill text-bg-primary">pantun</span>
+        <span class="badge rounded-pill text-bg-primary">variasi</span>
       </span>
     </div>
   );

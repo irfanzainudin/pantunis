@@ -13,10 +13,15 @@
   padding: 10px;
   border-left: solid 1px black;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .pantun-span {
   text-align: left;
   line-height: 5px;
+}
+
+.pantun-span span {
+  margin-right: 5px;
 }
