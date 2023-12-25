@@ -9,8 +9,24 @@ function Pantun(props) {
 
   useEffect(() => {
     // TODO: useEffect() runs on every render cycle -- meaning if there are changes to the UI, then useEffect() will run (at least that's what I think it means) -- so changing the lines of the pantun to highlight the search word will cause useEffect() -- hence prosesPantun() -- to run twice and the lines will be printed twice (at least that's what I think is happening)
-    prosesPantun();
+    // prosesPantun();
   }, []);
+
+  function getHighlightedText(text, highlight) {
+    // Split text on highlight term, include term itself into parts, ignore case
+    const parts = text.split(new RegExp(`(${highlight})`, "gi"));
+    return (
+      <span>
+        {parts.map((part, i) =>
+          part.toLowerCase() === highlight.toLowerCase() ? (
+            <b key={i}>{part}</b>
+          ) : (
+            part
+          )
+        )}
+      </span>
+    );
+  }
 
   const prosesPantun = () => {
     const bayang1 = pantun.bayang1.split(" ");
@@ -83,6 +99,14 @@ function Pantun(props) {
               }
             })
           : ""}
+        <p>{getHighlightedText(pantun.bayang1, kata)}</p>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;{getHighlightedText(pantun.bayang2, kata)}
+        </p>
+        <p>{getHighlightedText(pantun.maksud1, kata)}</p>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;{getHighlightedText(pantun.maksud2, kata)}
+        </p>
       </span>
     </div>
   );
