@@ -107,6 +107,8 @@ function Pantun(props) {
         <p>
           &nbsp;&nbsp;&nbsp;&nbsp;{getHighlightedText(pantun.maksud2, kata)}
         </p>
+        <span class="badge rounded-pill text-bg-primary">pantun</span>
+        <span class="badge rounded-pill text-bg-primary">variasi</span>
       </span>
     </div>
   );
