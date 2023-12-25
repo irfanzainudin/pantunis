@@ -19,3 +19,13 @@
 .tiada-pantun-teks {
   color: var(--bs-border-color-translucent);
 }
+
+@media (max-width: 600px) {
+  #cari-pantun {
+    display: none;
+  }
+
+  #cariPantunHelp {
+    display: none;
+  }
+}

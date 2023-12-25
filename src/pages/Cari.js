@@ -48,7 +48,7 @@ function Cari() {
       <form method="GET">
         <div className="row g-3 align-items-center mb-3">
           <div className="col-auto">
-            <label htmlFor="kata" className="col-form-label">
+            <label htmlFor="kata" id="cari-pantun" className="col-form-label">
               Cari pantun:
             </label>
           </div>
