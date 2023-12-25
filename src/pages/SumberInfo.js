@@ -6,8 +6,6 @@ function SumberInfo() {
   const { tajuk, penulis, pautan, imej } = location.state;
   return (
     <main>
-      {/* <h1>Sumber Info</h1>
-      <p>🚧 Under Construction 🚧</p> */}
       <img src={imej} className="imej-sumber" alt={imej} />
       {/* reference: https://www.google.com/url?sa=i&url=https%3A%2F%2Fbitsofco.de%2Fsectioning-content-in-html5%2F&psig=AOvVaw0hu4fEB7eL_ww97Rsiq--K&ust=1693663517746000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCND72bTKiYEDFQAAAAAdAAAAABAE */}
       <section className="tajuk-penulis">

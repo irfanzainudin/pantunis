@@ -26,3 +26,14 @@
   display: flex;
   justify-content: center;
 }
+
+/* iPhone 12/13 Pro Max iOS 14.6 */
+@media (max-width: 428px) {
+  .imej-sumber {
+    width: 50%;
+  }
+
+  .lsgr-container {
+    width: 80%;
+  }
+}
