@@ -5,7 +5,7 @@ function PasukanKami() {
       {/* <p>🚧 Under Construction 🚧</p> */}
       <p>
         Mengambil inspirasi daripada <a href="http://pantun.com/">pantun.com</a>
-        , Irfan Zainudin{" "}
+        , saya{" "}
         <span>
           <a className="text-muted" href="https://twitter.com/irfan__zainudin">
             <svg
@@ -20,14 +20,14 @@ function PasukanKami() {
             </svg>
           </a>{" "}
         </span>
-        cipta <a href="https://pantunis.com/">pantunis.com</a>
+        persembahkan <a href="https://pantunis.com/">pantunis.com</a>
       </p>
       <s>
-        Irfan Zainudin tidak puas hati dengan{" "}
+        Aku tak puas hati dengan{" "}
         <a href="http://pantun.com/" style={{ pointerEvents: "none" }}>
           pantun.com
         </a>{" "}
-        jadi dia cipta{" "}
+        jadi aku buat{" "}
         <a href="https://pantunis.com/" style={{ pointerEvents: "none" }}>
           pantunis.com
         </a>
