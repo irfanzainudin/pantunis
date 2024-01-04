@@ -28,7 +28,7 @@ function TerokaKategori() {
   const fetchPantun = async () => {
     // Send GET request to 'pantun/semua' endpoint
     axios
-      .get("http://localhost:4001/pantun/semua")
+      .get("https://pantunis-api.vercel.app/api/semua")
       .then((response) => {
         // Update the pantun state
         setPantun(response.data);

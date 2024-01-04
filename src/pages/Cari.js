@@ -23,7 +23,7 @@ function Cari() {
 
   const handleSubmit = () => {
     axios
-      .get("http://localhost:4001/pantun/cariGunaKata?kata=" + kata)
+      .get("https://pantunis-api.vercel.app/api/cariGunaKata?kata=" + kata)
       .then((response) => {
         // Update the pantun state
         setPantun(response.data);

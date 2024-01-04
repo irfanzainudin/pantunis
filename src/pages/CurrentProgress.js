@@ -12,7 +12,7 @@ function CurrentProgress() {
   const fetchCount = async () => {
     // Send GET request to 'pantun/jumlah' endpoint
     axios
-      .get("http://localhost:4001/pantun/jumlah")
+      .get("https://pantunis-api.vercel.app/api/jumlah")
       .then((response) => {
         // Update the pantun count
         setCount(response.data[0]["count(*)"]);
