@@ -4,6 +4,7 @@ import Pantun from "../components/Pantun";
 import { useSearchParams } from "react-router-dom";
 import "./Cari.css";
 
+// TODO: I don't think we need this
 let headers = {
   "Access-Control-Allow-Credentials": true,
   "Access-Control-Allow-Origin": "https://pantunis-api.vercel.app/",

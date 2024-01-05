@@ -45,11 +45,11 @@ function Navbar() {
                 Halaman Utama
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/teroka">
                 Teroka
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link className="nav-link" to="/sumber">
                 Sumber

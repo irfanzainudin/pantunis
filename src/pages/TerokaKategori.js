@@ -21,6 +21,7 @@ function TerokaKategori() {
   const [pantun, setPantun] = useState("");
   const [loading, setLoading] = useState(true);
 
+  // TODO: I don't think we need this
   let headers = {
     "Access-Control-Allow-Credentials": true,
     "Access-Control-Allow-Origin": "https://pantunis-api.vercel.app/",

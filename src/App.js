@@ -34,7 +34,7 @@ function App() {
         <Route path="/current-progress" element={<CurrentProgress />} />
         <Route path="/*" element={<HalamanHilang />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
