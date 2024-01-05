@@ -28,3 +28,6 @@ How\ to\ Deploy\ a\ ReactJS\ Web\ Application\ on\ DigitalOcean\ by\ Żimuzo\ Ob
 .dockerignore
 compose.yaml
 Dockerfile
+
+# pocketbase
+server/pb

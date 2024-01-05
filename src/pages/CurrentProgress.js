@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+let headers = {
+  "Access-Control-Allow-Credentials": true,
+  "Access-Control-Allow-Origin": "https://pantunis-api.vercel.app/",
+  Vary: "Origin",
+  "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+  "Access-Control-Allow-Headers":
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+};
+
 function CurrentProgress() {
   const [count, setCount] = useState(0);
 
@@ -12,7 +21,7 @@ function CurrentProgress() {
   const fetchCount = async () => {
     // Send GET request to 'pantun/jumlah' endpoint
     axios
-      .get("https://pantunis-api.vercel.app/api/jumlah")
+      .get("https://pantunis-api.vercel.app/api/jumlah", headers)
       .then((response) => {
         // Update the pantun count
         setCount(response.data[0]["count(*)"]);

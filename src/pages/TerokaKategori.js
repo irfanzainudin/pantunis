@@ -21,6 +21,15 @@ function TerokaKategori() {
   const [pantun, setPantun] = useState("");
   const [loading, setLoading] = useState(true);
 
+  let headers = {
+    "Access-Control-Allow-Credentials": true,
+    "Access-Control-Allow-Origin": "https://pantunis-api.vercel.app/",
+    Vary: "Origin",
+    "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+    "Access-Control-Allow-Headers":
+      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+  };
+
   useEffect(() => {
     fetchPantun();
   }, []);
@@ -28,7 +37,7 @@ function TerokaKategori() {
   const fetchPantun = async () => {
     // Send GET request to 'pantun/semua' endpoint
     axios
-      .get("https://pantunis-api.vercel.app/api/semua")
+      .get("https://pantunis-api.vercel.app/api/semua", headers)
       .then((response) => {
         // Update the pantun state
         setPantun(response.data);
