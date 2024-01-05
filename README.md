@@ -6,4 +6,5 @@ npm start
 
 ## Backend
 
-npm run start-server
+- Dev : https://github.com/irfanzainudin/pantunis-api
+- Prod : https://pantunis-api.vercel.app/

@@ -19,7 +19,7 @@ function KadSumber({ tajuk, penulis, pautan, imej }) {
             <p className="card-text">{penulis}</p>
             <p className="card-text">
               <small className="text-body-secondary">
-                Pautan utama: <a src={pautan}>{pautan}</a>
+                Pautan utama: <a href={pautan}>{pautan}</a>
               </small>
             </p>
             <Link

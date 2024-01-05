@@ -1,7 +1,6 @@
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function SumberInfo() {
-  // const { tajuk_sumber } = useParams();
   const location = useLocation();
   const { tajuk, penulis, pautan, imej } = location.state;
   return (
