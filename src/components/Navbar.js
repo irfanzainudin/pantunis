@@ -63,7 +63,7 @@ function Navbar() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Perihal Pembangun
+                Perihal Pembangunan
               </Link>
               <ul className="dropdown-menu">
                 <li>
@@ -72,16 +72,16 @@ function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/current-progress">
-                    Current Progress
+                  <Link className="dropdown-item" to="/perkembangan">
+                    Perkembangan Terkini
                   </Link>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/pasukan-kami">
-                    Pasukan Kami
+                  <Link className="dropdown-item" to="/pembangun">
+                    Pembangun
                   </Link>
                 </li>
                 {/* TODO: get an workspace (email, domain etc.) first, then setup a "Contact Us" page */}
@@ -93,9 +93,6 @@ function Navbar() {
               </ul>
             </li>
           </ul>
-          {/* <form className="d-flex" role="search">
-            <button className="btn btn-primary">Sign Up</button>
-          </form> */}
         </div>
       </div>
     </nav>

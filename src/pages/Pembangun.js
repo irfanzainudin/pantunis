@@ -1,8 +1,6 @@
-function PasukanKami() {
+function Pembangun() {
   return (
     <main className="App-main">
-      {/* <h1>Pasukan Kami</h1> */}
-      {/* <p>🚧 Under Construction 🚧</p> */}
       <p>
         Mengambil inspirasi daripada <a href="http://pantun.com/">pantun.com</a>
         , saya{" "}
@@ -39,4 +37,4 @@ function PasukanKami() {
   );
 }
 
-export default PasukanKami;
+export default Pembangun;

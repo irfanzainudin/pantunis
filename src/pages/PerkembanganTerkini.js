@@ -11,7 +11,7 @@ let headers = {
     "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
 };
 
-function CurrentProgress() {
+function PerkembanganTerkini() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -51,4 +51,4 @@ function CurrentProgress() {
   );
 }
 
-export default CurrentProgress;
+export default PerkembanganTerkini;

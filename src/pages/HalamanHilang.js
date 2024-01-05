@@ -2,15 +2,14 @@ function HalamanHilang() {
   return (
     <main className="App-main">
       <h1>404 - Halaman Hilang</h1>
-      <blockquote className="blockquote mb-0">
-        <p>
-          Siakap senohong gelama ikan duri, bercakap bohong lama-lama mencuri.
-        </p>
-        <footer className="blockquote-footer">
-          Salah satu pantun dalam kategori{" "}
-          <cite title="Source Title">Kehilangan</cite>
-        </footer>
-      </blockquote>
+      <div className="pantun">
+        <span className="pantun-span">
+          <p>Pucuk pauh delima batu,</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;Anak sembilang di tapak tangan;</p>
+          <p>Biar jauh di negeri satu,</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;Hilang di mata, di hati jangan.</p>
+        </span>
+      </div>
     </main>
   );
 }
