@@ -18,8 +18,7 @@ function Cari() {
   const sp = useSearchParams();
   const kata = sp[0].get("kata");
   const [pantun, setPantun] = useState("");
-  // TODO: do some loading
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     handleSubmit();
@@ -41,9 +40,8 @@ function Cari() {
         // Update the pantun state
         setPantun(response.data);
 
-        // TODO: do some loading
         // Update loading state
-        // setLoading(false);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(
@@ -52,8 +50,41 @@ function Cari() {
       });
   };
 
-  // TODO: do some loading
-  // if (loading) return <p>Pantun table is loading...</p>;
+  // Show loading while fetching data
+  if (loading)
+    return (
+      <main className="tiada-pantun-kontena">
+        <h1 className="my-3">{kata}</h1>
+        <form method="GET">
+          <div className="row g-3 align-items-center mb-3">
+            <div className="col-auto">
+              <label htmlFor="kata" className="col-form-label">
+                Cari pantun:
+              </label>
+            </div>
+            <div className="col-auto">
+              <input
+                type="text"
+                id="kata"
+                name="kata"
+                className="form-control"
+                aria-describedby="cariPantunHelp"
+                autoFocus
+                onChange={handleChange}
+              />
+            </div>
+            <div className="col-auto">
+              <span id="cariPantunHelp" className="form-text">
+                Tekan 'Enter' untuk cari.
+              </span>
+            </div>
+          </div>
+        </form>
+        <div className="pantun-pantun">
+          <h1 className="display-4 tiada-pantun-teks">Loading ...</h1>
+        </div>
+      </main>
+    );
 
   return pantun.length > 0 ? (
     <main className="cari-kontena">
