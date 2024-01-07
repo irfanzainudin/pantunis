@@ -85,7 +85,7 @@ function Navbar() {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/pembangun">
+                  <Link className="dropdown-item" to="/perihal">
                     Perihal Pantunis
                   </Link>
                 </li>
