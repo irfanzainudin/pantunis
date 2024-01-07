@@ -9,6 +9,7 @@ import Cari from "./pages/Cari";
 import Sumber from "./pages/Sumber";
 import SumberInfo from "./pages/SumberInfo";
 import Perihal from "./pages/Perihal";
+import SKD from "./pages/SKD";
 // import HubungiKami from "./pages/HubungiKami";
 import Sasaran from "./pages/Sasaran";
 import PerkembanganTerkini from "./pages/PerkembanganTerkini";
@@ -32,6 +33,7 @@ function App() {
         {/* <Route path="/hubungi-kami" element={<HubungiKami />} /> */}
         <Route path="/sasaran" element={<Sasaran />} />
         <Route path="/perkembangan" element={<PerkembanganTerkini />} />
+        <Route path="/skd" element={<SKD />} />
         <Route path="/*" element={<HalamanHilang />} />
       </Routes>
       {/* <Footer /> */}

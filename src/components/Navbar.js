@@ -55,6 +55,11 @@ function Navbar() {
                 Sumber
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/skd">
+                SKD
+              </Link>
+            </li>
             <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
