@@ -81,7 +81,7 @@ function Navbar() {
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/pembangun">
-                    Pembangun
+                    Perihal Pantunis
                   </Link>
                 </li>
                 {/* TODO: get an workspace (email, domain etc.) first, then setup a "Contact Us" page */}

@@ -1,4 +1,4 @@
-function Pembangun() {
+function Perihal() {
   return (
     <main className="App-main">
       <p>
@@ -37,4 +37,4 @@ function Pembangun() {
   );
 }
 
-export default Pembangun;
+export default Perihal;
