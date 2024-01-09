@@ -22,24 +22,16 @@ function Pantun(props) {
   }
 
   // TODO: handle pantun 2 kerat as well
-  // return pantun.bayang2.length > 0 ? (
-  //   <div className="pantun">
-  //     <span className="pantun-span">
-  //       <p>{pantun.bayang1}</p>
-  //       <p>&nbsp;&nbsp;&nbsp;&nbsp;{pantun.maksud1}</p>
-  //     </span>
-  //   </div>
-  // ) : (
-  //   <div className="pantun">
-  //     <span className="pantun-span">
-  //       <p>{pantun.bayang1}</p>
-  //       <p>&nbsp;&nbsp;&nbsp;&nbsp;{pantun.bayang2}</p>
-  //       <p>{pantun.maksud1}</p>
-  //       <p>&nbsp;&nbsp;&nbsp;&nbsp;{pantun.maksud2}</p>
-  //     </span>
-  //   </div>
-  // );
-  return (
+  return pantun.jenis === 2 ? (
+    <div className="pantun">
+      <span className="pantun-span">
+        <p>{getHighlightedText(pantun.bayang1, kata)}</p>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;{getHighlightedText(pantun.maksud1, kata)}
+        </p>
+      </span>
+    </div>
+  ) : (
     <div className="pantun">
       <span className="pantun-span">
         <p>{getHighlightedText(pantun.bayang1, kata)}</p>
