@@ -4,7 +4,9 @@ import "./SKD.css";
 function SKD() {
   return (
     <main className="skd">
-      <h1>Soalan Kerap Ditanya (SKD)</h1>
+      <h1>
+        <i class="bi bi-patch-question"></i> Soalan Kerap Ditanya
+      </h1>
       <ol>
         <li>
           "Pantun X takde dalam pangkalan data."
@@ -32,9 +34,8 @@ function SKD() {
             <li>
               <p>
                 Buat masa ni, pendekatan saya ialah ambil pantun daripada sumber
-                yang "established" cth. budaya orang Melayu sendiri (saya
-                dibesarkan dalam budaya orang Melayu jadi tahu beberapa pantun),
-                buku koleksi pantun, laman web yang berautoriti dsb.
+                yang "established" cth. budaya orang Melayu sendiri, buku
+                koleksi pantun, laman web yang berautoriti dsb.
               </p>
               <p>
                 Ke depan baru pantun yang "user-generated", cara asal pantun

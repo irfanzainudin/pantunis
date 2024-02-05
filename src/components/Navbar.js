@@ -42,7 +42,7 @@ function Navbar() {
                 aria-current="page"
                 to="/halaman-utama"
               >
-                Halaman Utama
+                <i class="bi bi-house"></i> Halaman Utama
               </Link>
             </li>
             {/* <li className="nav-item">
@@ -52,12 +52,12 @@ function Navbar() {
             </li> */}
             <li className="nav-item">
               <Link className="nav-link" to="/sumber">
-                Sumber
+                <i class="bi bi-book"></i> Sumber
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/skd">
-                SKD
+                <i class="bi bi-patch-question"></i> SKD
               </Link>
             </li>
             <li className="nav-item dropdown">
@@ -68,17 +68,17 @@ function Navbar() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Perihal Pembangunan
+                <i class="bi bi-info-square"></i> Pantunis
               </Link>
               <ul className="dropdown-menu">
                 <li>
                   <Link className="dropdown-item" to="/sasaran">
-                    Sasaran
+                    <i class="bi bi-bullseye"></i> Sasaran
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/perkembangan">
-                    Perkembangan Terkini
+                    <i class="bi bi-graph-up-arrow"></i> Perkembangan Terkini
                   </Link>
                 </li>
                 <li>
@@ -86,7 +86,7 @@ function Navbar() {
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/perihal">
-                    Perihal Pantunis
+                    <i class="bi bi-code-square"></i> Perihal Pembangunan
                   </Link>
                 </li>
                 {/* TODO: get an workspace (email, domain etc.) first, then setup a "Contact Us" page */}
