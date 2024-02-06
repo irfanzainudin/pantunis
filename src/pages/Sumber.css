@@ -6,6 +6,7 @@
 }
 
 .sumber {
+  min-width: 40vw;
   max-width: 40vw;
   margin: 20px;
 }
@@ -29,6 +30,11 @@
 
 /* iPhone 12/13 Pro Max iOS 14.6 */
 @media (max-width: 428px) {
+  .sumber {
+    min-width: 80vw;
+    max-width: 80vw;
+  }
+
   .imej-sumber {
     width: 50%;
   }
