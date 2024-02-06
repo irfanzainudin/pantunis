@@ -1,52 +1,19 @@
 import React from "react";
 import "./Pantun.css";
 
+// Keratan Pantun (Pantun Models)
+import Pantun2Kerat from "./Pantun2Kerat";
+import Pantun4Kerat from "./Pantun4Kerat";
+
 function Pantun(props) {
   const pantun = props.children;
   const kata = props.kata;
 
-  function getHighlightedText(text, highlight) {
-    // Split text on highlight term, include term itself into parts, ignore case
-    const parts = text.split(new RegExp(`(${highlight})`, "gi"));
-    return (
-      <span>
-        {parts.map((part, i) =>
-          part.toLowerCase() === highlight.toLowerCase() ? (
-            <b key={i}>{part}</b>
-          ) : (
-            part
-          )
-        )}
-      </span>
-    );
-  }
-
-  // TODO: handle pantun 2 kerat as well
-  return pantun.jenis === 2 ? (
-    <div className="pantun">
-      <span className="pantun-span">
-        <p>{getHighlightedText(pantun.bayang1, kata)}</p>
-        <p>
-          &nbsp;&nbsp;&nbsp;&nbsp;{getHighlightedText(pantun.maksud1, kata)}
-        </p>
-      </span>
-    </div>
-  ) : (
-    <div className="pantun">
-      <span className="pantun-span">
-        <p>{getHighlightedText(pantun.bayang1, kata)}</p>
-        <p>
-          &nbsp;&nbsp;&nbsp;&nbsp;{getHighlightedText(pantun.bayang2, kata)}
-        </p>
-        <p>{getHighlightedText(pantun.maksud1, kata)}</p>
-        <p>
-          &nbsp;&nbsp;&nbsp;&nbsp;{getHighlightedText(pantun.maksud2, kata)}
-        </p>
-        {/* <span class="badge rounded-pill text-bg-primary">pantun</span>
-        <span class="badge rounded-pill text-bg-primary">variasi</span> */}
-      </span>
-    </div>
-  );
+  if (pantun.jenis === 2)
+    return <Pantun2Kerat kata={kata}>{pantun}</Pantun2Kerat>;
+  else if (pantun.jenis === 4)
+    return <Pantun4Kerat kata={kata}>{pantun}</Pantun4Kerat>;
+  else return <Pantun4Kerat kata={kata}>{pantun}</Pantun4Kerat>;
 }
 
 export default Pantun;

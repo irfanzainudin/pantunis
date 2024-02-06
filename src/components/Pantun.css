@@ -7,20 +7,26 @@
 }
 
 .pantun {
-  width: 25vw;
+  width: 30vw;
   height: 15vh;
-  margin: 20px;
   padding: 10px;
-  border-left: solid 1px black;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.pantun-action-col {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  width: 20%;
 }
 
 .pantun-span {
   text-align: left;
   line-height: 0.8rem;
+  width: 80%;
 }
 
 .tanda {
@@ -33,9 +39,9 @@
 
 @media (max-width: 320px) {
   .pantun {
-    width: 90vw;
+    width: 100vw;
     height: 30vh;
-    margin: 20px;
+    margin: 1rem 0 !important;
   }
 
   .pantun-span {
@@ -46,9 +52,9 @@
 /* Galaxy Note 20 Ultra Android 11 */
 @media (max-width: 412px) {
   .pantun {
-    width: 80vw;
+    width: 100vw;
     height: 20vh;
-    margin: 20px;
+    margin: 1rem 0 !important;
   }
 
   .pantun-span {
@@ -59,9 +65,9 @@
 /* iPhone 12/13 Pro Max iOS 14.6 */
 @media (max-width: 428px) {
   .pantun {
-    width: 80vw;
+    width: 100vw;
     height: 20vh;
-    margin: 20px;
+    margin: 1rem 0 !important;
   }
 
   .pantun-span {
