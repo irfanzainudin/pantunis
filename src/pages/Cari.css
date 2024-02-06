@@ -24,28 +24,8 @@
   font-size: smaller;
 }
 
-@media (max-width: 320px) {
-  #cari-pantun {
-    display: none;
-  }
-
-  #cariPantunHelp {
-    display: none;
-  }
-}
-
-@media (max-width: 414px) {
-  #cari-pantun {
-    display: none;
-  }
-
-  #cariPantunHelp {
-    display: none;
-  }
-}
-
 /* iPhone 12/13 Pro Max iOS 14.6 */
-@media (max-width: 428px) {
+@media (max-width: 560px) {
   #cari-pantun {
     display: none;
   }

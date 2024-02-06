@@ -37,11 +37,14 @@
   margin-right: 5px;
 }
 
-@media (max-width: 320px) {
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .pantun {
     width: 100vw;
-    height: 30vh;
-    margin: 1rem 0 !important;
+    height: 20vh;
+    margin: 2rem 0 !important;
   }
 
   .pantun-span {
@@ -49,12 +52,12 @@
   }
 }
 
-/* Galaxy Note 20 Ultra Android 11 */
-@media (max-width: 412px) {
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .pantun {
     width: 100vw;
     height: 20vh;
-    margin: 1rem 0 !important;
+    margin: 2rem 0 !important;
   }
 
   .pantun-span {
@@ -62,12 +65,1045 @@
   }
 }
 
-/* iPhone 12/13 Pro Max iOS 14.6 */
-@media (max-width: 428px) {
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .pantun {
     width: 100vw;
     height: 20vh;
-    margin: 1rem 0 !important;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Galaxy S6 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- HTC One ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Google Pixel ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Google Pixel XL ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Nexus 4 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 384px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 2) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (device-width: 384px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 384px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Nexus 5 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 3) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Nexus 6 and 6P ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 4) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 4) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Windows Phone ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 480px) and (device-height: 800px) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (device-width: 480px) and (device-height: 800px) and (orientation: portrait) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 480px) and (device-height: 800px) and (orientation: landscape) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Laptops */
+
+/* ----------- Non-Retina Screens ----------- */
+/* @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+} */
+
+/* ----------- Retina Screens ----------- */
+/* @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .pantun {
+    width: 100vw;
+    height: 20vh;
+    margin: 2rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+} */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Galaxy Tab 2 ----------- */
+
+/* Portrait and Landscape */
+@media (min-device-width: 800px) and (max-device-width: 1280px) {
+  .pantun {
+    width: 60vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media (max-device-width: 800px) and (orientation: portrait) {
+  .pantun {
+    width: 80vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media (max-device-width: 1280px) and (orientation: landscape) {
+  .pantun {
+    width: 60vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Galaxy Tab S ----------- */
+
+/* Portrait and Landscape */
+@media (min-device-width: 800px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 60vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media (max-device-width: 800px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 80vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media (max-device-width: 1280px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .pantun {
+    width: 60vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Nexus 7 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) and (orientation: portrait) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) and (orientation: landscape) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Nexus 9 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 1536px) and (device-height: 2048px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (device-width: 1536px) and (device-height: 2048px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) and (orientation: portrait) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 1536px) and (device-height: 2048px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) and (orientation: landscape) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Kindle Fire HD 7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .pantun {
+    width: 60vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
+  .pantun {
+    width: 60vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 800px) and (max-device-width: 900px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape) {
+  .pantun {
+    width: 60vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 901px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape) {
+  .pantun {
+    width: 40vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* ----------- Kindle Fire HD 8.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
+  }
+
+  .pantun-span {
+    line-height: normal;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape) {
+  .pantun {
+    width: 30vw;
+    height: 20vh;
+    margin: 3rem 0 !important;
   }
 
   .pantun-span {

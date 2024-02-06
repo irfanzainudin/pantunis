@@ -121,7 +121,7 @@ function Cari() {
       <span className="text-muted teks-hasil-carian">
         Kami jumpa {pantun.length} pantun untuk kata "{kata}".
       </span>
-      <span className="text-muted teks-hasil-carian">
+      <span className="text-muted teks-hasil-carian mb-3">
         Tekan ikon untuk ketahui info lebih.
       </span>
       <div className="pantun-pantun">
