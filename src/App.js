@@ -8,9 +8,9 @@ import Cari from "./pages/Cari";
 // import TerokaKategori from "./pages/TerokaKategori";
 import Sumber from "./pages/Sumber";
 import SumberInfo from "./pages/SumberInfo";
+import SumberInternet from "./pages/SumberInternet";
 import Perihal from "./pages/Perihal";
 import SKD from "./pages/SKD";
-// import HubungiKami from "./pages/HubungiKami";
 import Sasaran from "./pages/Sasaran";
 import PerkembanganTerkini from "./pages/PerkembanganTerkini";
 import HalamanHilang from "./pages/HalamanHilang";
@@ -29,8 +29,8 @@ function App() {
         <Route path="/teroka/:nama_kategori" element={<TerokaKategori />} /> */}
         <Route path="/sumber" element={<Sumber />} />
         <Route path="/sumber/:tajuk_sumber" element={<SumberInfo />} />
+        <Route path="/sumber-internet" element={<SumberInternet />} />
         <Route path="/perihal" element={<Perihal />} />
-        {/* <Route path="/hubungi-kami" element={<HubungiKami />} /> */}
         <Route path="/sasaran" element={<Sasaran />} />
         <Route path="/perkembangan" element={<PerkembanganTerkini />} />
         <Route path="/skd" element={<SKD />} />
