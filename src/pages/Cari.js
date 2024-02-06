@@ -88,11 +88,15 @@ function Cari() {
 
   return pantun.length > 0 ? (
     <main className="cari-kontena">
-      <h1 className="my-3">{kata}</h1>
+      <h3 className="my-3">{kata}</h3>
       <form method="GET">
         <div className="row g-3 align-items-center mb-3">
           <div className="col-auto">
-            <label htmlFor="kata" id="cari-pantun" className="col-form-label">
+            <label
+              htmlFor="kata"
+              id="cari-pantun"
+              className="col-form-label teks-hasil-carian"
+            >
               Cari pantun:
             </label>
           </div>
@@ -108,12 +112,18 @@ function Cari() {
             />
           </div>
           <div className="col-auto">
-            <span id="cariPantunHelp" className="form-text">
+            <span id="cariPantunHelp" className="form-text teks-hasil-carian">
               Tekan 'Enter' untuk cari.
             </span>
           </div>
         </div>
       </form>
+      <span className="text-muted teks-hasil-carian">
+        Kami jumpa {pantun.length} pantun untuk kata "{kata}".
+      </span>
+      <span className="text-muted teks-hasil-carian">
+        Tekan ikon untuk ketahui info lebih.
+      </span>
       <div className="pantun-pantun">
         {pantun.length > 0
           ? pantun.map((p) => {

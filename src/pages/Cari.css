@@ -20,6 +20,10 @@
   color: var(--bs-border-color-translucent);
 }
 
+.teks-hasil-carian {
+  font-size: smaller;
+}
+
 @media (max-width: 320px) {
   #cari-pantun {
     display: none;
