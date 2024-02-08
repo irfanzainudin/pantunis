@@ -9,9 +9,9 @@ function Pantun(props) {
   const pantun = props.children;
   const kata = props.kata;
 
-  if (pantun.jenis === 2)
+  if (pantun.pantun_jenis === 2)
     return <Pantun2Kerat kata={kata}>{pantun}</Pantun2Kerat>;
-  else if (pantun.jenis === 4)
+  else if (pantun.pantun_jenis === 4)
     return <Pantun4Kerat kata={kata}>{pantun}</Pantun4Kerat>;
   else return <Pantun4Kerat kata={kata}>{pantun}</Pantun4Kerat>;
 }
