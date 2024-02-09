@@ -2,7 +2,7 @@ function SumberInternet() {
   return (
     <main className="p-2 text-start">
       <h1>
-        <i class="bi bi-globe2"></i> Pantun Daripada Internet
+        <i className="bi bi-globe2"></i> Pantun Daripada Internet
       </h1>
       <ol>
         <li>

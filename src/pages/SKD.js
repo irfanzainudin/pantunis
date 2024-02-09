@@ -5,7 +5,7 @@ function SKD() {
   return (
     <main className="skd">
       <h1>
-        <i class="bi bi-patch-question"></i> Soalan Kerap Ditanya
+        <i className="bi bi-patch-question"></i> Soalan Kerap Ditanya
       </h1>
       <ol>
         <li>
