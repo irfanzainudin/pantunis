@@ -27,3 +27,4 @@ Deploy along with new datasets (ideally ATMA's because it's large so a Teroka pa
 ## Enhancements
 
 - [ ] Populate the homepage instead of navigating to a new page for the search results
+- [ ] Test more designs to left-align the text in ModalPantun to make it more neat

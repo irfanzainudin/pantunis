@@ -12,10 +12,13 @@ function ModalPantun(props) {
     }
     return (
       <span>
+        {/* TODO: Test other designs such as the one below to left-align the text to make it more neat */}
+        {/* TODO: <div className="text-start m-auto" style={{ width: "80%" }}> */}
         <h3>{pantun.pantun_bayang1}</h3>
-        <h3>&nbsp;&nbsp;{pantun.pantun_bayang2}</h3>
+        <h3>{pantun.pantun_bayang2}</h3>
         <h3>{pantun.pantun_maksud1}</h3>
-        <h3>&nbsp;&nbsp;{pantun.pantun_maksud2}</h3>
+        <h3>{pantun.pantun_maksud2}</h3>
+        {/* </div> */}
       </span>
     );
   }
@@ -64,7 +67,7 @@ function ModalPantun(props) {
                 <tr>
                   <th scope="row">Lesen</th>
                   <td>
-                    N/A <span class="badge bg-secondary">Akan Datang</span>
+                    N/A <span className="badge bg-secondary">Akan Datang</span>
                   </td>
                 </tr>
               </tbody>
