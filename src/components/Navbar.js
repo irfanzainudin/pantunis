@@ -45,19 +45,14 @@ function Navbar() {
                 <i className="bi bi-house"></i> Halaman Utama
               </Link>
             </li>
-            {/* <li className="nav-item">
-              <Link className="nav-link" to="/teroka">
-                Teroka
-              </Link>
-            </li> */}
             <li className="nav-item">
-              <Link className="nav-link" to="/sumber">
-                <i className="bi bi-book"></i> Sumber
+              <Link className="nav-link" to="/teroka">
+                <i class="bi bi-compass"></i> Teroka
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/skd">
-                <i className="bi bi-patch-question"></i> SKD
+              <Link className="nav-link" to="/sumber">
+                <i className="bi bi-book"></i> Sumber
               </Link>
             </li>
             <li className="nav-item dropdown">
@@ -80,6 +75,11 @@ function Navbar() {
                   <Link className="dropdown-item" to="/perkembangan">
                     <i className="bi bi-graph-up-arrow"></i> Perkembangan
                     Terkini
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/skd">
+                    <i className="bi bi-patch-question"></i> SKD
                   </Link>
                 </li>
                 <li>

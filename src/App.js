@@ -4,8 +4,8 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import HalamanUtama from "./pages/HalamanUtama";
 import Cari from "./pages/Cari";
-// import Teroka from "./pages/Teroka";
-// import TerokaKategori from "./pages/TerokaKategori";
+import Teroka from "./pages/Teroka";
+import TerokaTema from "./pages/TerokaTema";
 import Sumber from "./pages/Sumber";
 import SumberInfo from "./pages/SumberInfo";
 import SumberInternet from "./pages/SumberInternet";
@@ -25,8 +25,8 @@ function App() {
         <Route exact path="/" element={<HalamanUtama />} />
         <Route path="/halaman-utama" element={<HalamanUtama />} />
         <Route path="/cari" element={<Cari />} />
-        {/* <Route path="/teroka" element={<Teroka />} />
-        <Route path="/teroka/:nama_kategori" element={<TerokaKategori />} /> */}
+        <Route path="/teroka" element={<Teroka />} />
+        <Route path="/teroka/:nama_tema" element={<TerokaTema />} />
         <Route path="/sumber" element={<Sumber />} />
         <Route path="/sumber/:tajuk_sumber" element={<SumberInfo />} />
         <Route path="/sumber-internet" element={<SumberInternet />} />
