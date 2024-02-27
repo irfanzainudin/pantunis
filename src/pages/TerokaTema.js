@@ -51,7 +51,7 @@ function TerokaTema() {
     return (
       <main className="tiada-pantun-kontena">
         <div className="pantun-pantun">
-          <h1 className="display-4 tiada-pantun-teks">Loading ...</h1>
+          <h1 className="display-4 tiada-pantun-teks my-3">Loading...</h1>
         </div>
       </main>
     );
@@ -61,25 +61,33 @@ function TerokaTema() {
   };
 
   return (
-    <main>
-      <div className="d-flex flex-column justify-content-between align-items-center my-3">
-        <section className="mb-3 w-25">
-          <label htmlFor="cari" className="form-label">
-            Saring tema "{nama_tema}"
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="cari"
-            aria-describedby="cari"
-            autoFocus
-            onChange={handleChange}
-          />
-          <div id="cari" className="form-text">
-            Saring pantun guna perkataan.
-          </div>
-        </section>
-      </div>
+    <main className="d-flex flex-column justify-content-between align-items-center my-3">
+      <section className="mb-3">
+        <h1 className="fs-3 my-3">Tema: {nama_tema}</h1>
+        <input
+          type="text"
+          className="form-control"
+          id="saring"
+          aria-describedby="saringPantunHelp"
+          autoFocus
+          onChange={handleChange}
+        />
+        <div id="saringPantunHelp" className="form-text">
+          Saring pantun guna perkataan.
+        </div>
+      </section>
+      {filteredPantun.length > 0 ? (
+        <span className="text-muted" style={{ fontSize: "smaller" }}>
+          Kami jumpa {filteredPantun.length} pantun untuk tema: {nama_tema}.
+        </span>
+      ) : (
+        <span className="text-muted" style={{ fontSize: "smaller" }}>
+          Kami jumpa {pantun.length} pantun untuk tema: {nama_tema}.
+        </span>
+      )}
+      <span className="text-muted mb-3" style={{ fontSize: "smaller" }}>
+        Tekan ikon untuk ketahui info lebih.
+      </span>
       <div className="pantun-pantun">
         {pantun.length > 0
           ? pantun.map((p) => {
@@ -96,30 +104,6 @@ function TerokaTema() {
             })
           : ""}
       </div>
-      {/* <ul className="list-group list-group-horizontal">
-        {pantun.length > 0
-          ? pantun.map((p) => {
-              return <li className="list-group-item">{p}</li>;
-            })
-          : ""}
-      </ul>
-      <ul className="list-group list-group-horizontal">
-        <li className="list-group-item">
-          <Pantun>
-            Siakap senohong gelama ikan duri, Bercakap bohong lama-lama mencuri
-          </Pantun>
-        </li>
-        <li className="list-group-item">
-          Dua tiga kucing berlari, Mana nak sama si kucing belang, Dua tiga
-          boleh ku cari, Mana nak sama si adik seorang
-        </li>
-        <li className="list-group-item">
-          Buah cempedak luar pagar, Ambil galah tolong jolokkan, Saya budak baru
-          belajar, Kalau salah tolong tunjukkan
-        </li>
-        <li className="list-group-item">A fourth item</li>
-        <li className="list-group-item">And a fifth one</li>
-      </ul> */}
     </main>
   );
 }

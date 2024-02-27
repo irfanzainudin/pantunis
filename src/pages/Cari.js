@@ -54,41 +54,15 @@ function Cari() {
   if (loading)
     return (
       <main className="tiada-pantun-kontena">
-        <h1 className="my-3">{kata}</h1>
-        <form method="GET">
-          <div className="row g-3 align-items-center mb-3">
-            <div className="col-auto">
-              <label htmlFor="kata" className="col-form-label">
-                Cari pantun:
-              </label>
-            </div>
-            <div className="col-auto">
-              <input
-                type="text"
-                id="kata"
-                name="kata"
-                className="form-control"
-                aria-describedby="cariPantunHelp"
-                autoFocus
-                onChange={handleChange}
-              />
-            </div>
-            <div className="col-auto">
-              <span id="cariPantunHelp" className="form-text">
-                Tekan 'Enter' untuk cari.
-              </span>
-            </div>
-          </div>
-        </form>
         <div className="pantun-pantun">
-          <h1 className="display-4 tiada-pantun-teks">Loading ...</h1>
+          <h1 className="display-4 tiada-pantun-teks my-3">Loading...</h1>
         </div>
       </main>
     );
 
   return pantun.length > 0 ? (
     <main className="cari-kontena">
-      <h3 className="my-3">{kata}</h3>
+      <h1 className="fs-3 my-3">{kata}</h1>
       <form method="GET">
         <div className="row g-3 align-items-center mb-3">
           <div className="col-auto">
@@ -134,7 +108,7 @@ function Cari() {
     </main>
   ) : (
     <main className="tiada-pantun-kontena">
-      <h1 className="my-3">{kata}</h1>
+      <h1 className="fs-3 my-3">{kata}</h1>
       <form method="GET">
         <div className="row g-3 align-items-center mb-3">
           <div className="col-auto">
@@ -161,10 +135,10 @@ function Cari() {
         </div>
       </form>
       <div className="pantun-pantun">
-        <h1 className="display-4 tiada-pantun-teks">
+        <h2 className="display-4 tiada-pantun-teks">
           Maaf, tiada pantun untuk perkataan "{kata}" <br /> dalam pangkalan
           data.
-        </h1>
+        </h2>
       </div>
     </main>
   );
