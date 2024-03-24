@@ -11,6 +11,14 @@ const sumber_sumber = [
     nota: "published",
   },
   {
+    tajuk: "Malay Pantuns",
+    penulis: "A. W. Hamilton",
+    pautan:
+      "https://www.malaycivilization.com.my/omeka/files/original/47cee3bf87ef80ba92a195c691ee2fc3.pdf",
+    imej: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1307396338i/11558067.jpg",
+    nota: "draft",
+  },
+  {
     tajuk: "KUMPULAN PANTUN LISAN MELAYU: KURIK KUNDI MERAH SAGA EDISI KEDUA",
     penulis: "Dewan Bahasa Dan Pustaka",
     pautan: "https://dbpniaga.my/Inventori/Detail_Inventori?i=MzM1",
