@@ -16,7 +16,7 @@ const sumber_sumber = [
     pautan:
       "https://www.malaycivilization.com.my/omeka/files/original/47cee3bf87ef80ba92a195c691ee2fc3.pdf",
     imej: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1307396338i/11558067.jpg",
-    nota: "draft",
+    nota: "published",
   },
   {
     tajuk: "KUMPULAN PANTUN LISAN MELAYU: KURIK KUNDI MERAH SAGA EDISI KEDUA",
