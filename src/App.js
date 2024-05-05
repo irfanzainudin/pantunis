@@ -23,7 +23,7 @@ function App() {
       </header>
       <Routes>
         <Route exact path="/" element={<HalamanUtama />} />
-        <Route path="/halaman-utama" element={<HalamanUtama />} />
+        {/* <Route path="/halaman-utama" element={<HalamanUtama />} /> */}
         <Route path="/cari" element={<Cari />} />
         <Route path="/teroka" element={<Teroka />} />
         <Route path="/teroka/:nama_tema" element={<TerokaTema />} />
