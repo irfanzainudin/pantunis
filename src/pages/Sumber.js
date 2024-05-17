@@ -26,6 +26,14 @@ const sumber_sumber = [
     nota: "draft",
   },
   {
+    tajuk: 'Koleksi "Sejuta Pantun" oleh Portal Malaycivilization',
+    penulis:
+      "Institut Alam dan Tamadun Melayu (ATMA), Universiti Kebangsaan Malaysia",
+    pautan: "https://malaycivilization.com.my",
+    imej: "",
+    nota: "draft",
+  },
+  {
     tajuk: "Budaya Melayu",
     penulis: "Orang Melayu",
     pautan: "https://pantunis.com",
