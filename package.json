@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@vercel/analytics": "^1.1.1",
     "axios": "^1.6.4",
+    "odometer": "^0.4.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",

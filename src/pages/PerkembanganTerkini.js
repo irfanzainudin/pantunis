@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Odometer from "odometer";
 
 // TODO: I don't think we need this
 let headers = {
@@ -12,7 +13,7 @@ let headers = {
 };
 
 function PerkembanganTerkini() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   useEffect(() => {
     // TODO: make it real-time
@@ -24,8 +25,15 @@ function PerkembanganTerkini() {
     axios
       .get("https://pantunis-api.vercel.app/api/jumlah", headers)
       .then((response) => {
+        // Setup OdomoterJS
+        const odometer = new Odometer({
+          el: document.querySelector(".pantun-odometer"),
+          value: 0,
+        });
+        // Update the odometer object
+        odometer.update(response.data[0]["count(*)"]);
         // Update the pantun count
-        setCount(response.data[0]["count(*)"]);
+        // setCount(response.data[0]["count(*)"]);
       })
       .catch((error) =>
         console.error(
@@ -39,7 +47,8 @@ function PerkembanganTerkini() {
       <div>
         <span>
           <big>
-            <b>{count > 0 ? count : 0}</b>
+            {/* <b>{count > 0 ? count : 0}</b> */}
+            <b className="odometer pantun-odometer">0</b>
           </big>{" "}
           {/* <p> */}
           <b>/ 1,000,000</b>
