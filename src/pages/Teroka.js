@@ -7,7 +7,7 @@ function Teroka() {
   return (
     <main className="mt-3">
       <h1>
-        <i class="bi bi-compass"></i> Teroka
+        <i className="bi bi-compass"></i> Teroka
       </h1>
       <h2 className="fs-6">Terokai Pantunis mengikut tema</h2>
       <div className="tema-tema">

@@ -43,7 +43,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/teroka">
-                <i class="bi bi-compass"></i> Teroka
+                <i className="bi bi-compass"></i> Teroka
               </Link>
             </li>
             <li className="nav-item">
