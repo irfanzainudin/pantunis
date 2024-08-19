@@ -11,7 +11,7 @@ function KadSumber({ tajuk, penulis, pautan, imej, nota }) {
     <div className="card mb-3 sumber">
       <div className="row g-0">
         <div className="col-md-4">
-          <img src={imej} className="img-fluid rounded-start" alt={imej} />
+          <img src={imej} className="img-fluid rounded-start" alt={imej} height={"100%"} width={"100%"} />
         </div>
         <div className="col-md-8">
           <div className="card-body">
@@ -37,7 +37,7 @@ function KadSumber({ tajuk, penulis, pautan, imej, nota }) {
     <div className="card mb-3 sumber">
       <div className="row g-0">
         <div className="col-md-4">
-          <img src={imej} className="img-fluid rounded-start" alt={imej} />
+          <img src={imej} className="img-fluid rounded-start" alt={imej} height={"100%"} width={"100%"} />
         </div>
         <div className="col-md-8">
           <div className="card-body">
