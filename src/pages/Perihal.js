@@ -1,6 +1,6 @@
 function Perihal() {
   return (
-    <main className="App-main">
+    <main className="App-main animate__animated animate__tada">
       <p>
         Mengambil inspirasi daripada <a href="http://pantun.com/">pantun.com</a>
         , saya{" "}

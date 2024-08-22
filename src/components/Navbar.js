@@ -73,11 +73,11 @@ function Navbar() {
                     Terkini
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link className="dropdown-item" to="/skd">
                     <i className="bi bi-patch-question"></i> SKD
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <hr className="dropdown-divider" />
                 </li>

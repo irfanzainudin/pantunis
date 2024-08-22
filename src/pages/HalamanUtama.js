@@ -16,7 +16,7 @@ function HalamanUtama() {
         method="GET"
         onSubmit={() => navigate("/cari?" + inputName + "=" + kata)}
       >
-        <div className="mb-3">
+        <div className="mb-3 animate__animated animate__fadeInDown">
           <h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ function HalamanUtama() {
             Cari pantun guna perkataan.
           </div>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary animate__animated animate__fadeInUp">
           Cari
         </button>
       </form>

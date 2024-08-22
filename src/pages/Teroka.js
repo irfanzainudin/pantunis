@@ -5,7 +5,7 @@ import "./Teroka.css";
 
 function Teroka() {
   return (
-    <main className="mt-3">
+    <main className="mt-3 animate__animated animate__fadeIn">
       <h1>
         <i className="bi bi-compass"></i> Teroka
       </h1>

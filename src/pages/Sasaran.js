@@ -4,9 +4,7 @@ function Sasaran() {
   return (
     <main className="App-main">
       <div>
-        {/* <h1>Sasaran</h1>
-        <p>🚧 Under Construction 🚧</p> */}
-        <span>
+        <span className="animate__animated animate__fadeIn">
           <big id="sasaran">
             <b>1 juta</b>
           </big>{" "}

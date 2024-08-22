@@ -43,16 +43,13 @@ function PerkembanganTerkini() {
   };
 
   return (
-    <main className="App-main">
+    <main className="App-main animate__animated animate__fadeIn animate__delay-1s">
       <div>
         <span>
           <big>
-            {/* <b>{count > 0 ? count : 0}</b> */}
             <b className="odometer pantun-odometer">0</b>
           </big>{" "}
-          {/* <p> */}
           <b>/ 1,000,000</b>
-          {/* </p> */}
           <p>pantun dalam pangkalan data</p>
         </span>
       </div>

@@ -75,7 +75,7 @@ function Sumber() {
   return (
     <main>
       <div>
-        <div className="sumber-sumber">
+        <div className="sumber-sumber animate__animated animate__fadeIn">
           {sumber_sumber.length > 0
             ? sumber_sumber.map((ss) => {
                 return (
