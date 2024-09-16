@@ -9,7 +9,9 @@ import TerokaTema from "./pages/TerokaTema";
 import Sumber from "./pages/Sumber";
 import SumberInfo from "./pages/SumberInfo";
 import SumberInternet from "./pages/SumberInternet";
+import Teka from "./pages/Teka";
 import Perihal from "./pages/Perihal";
+import Lesen from "./pages/Lesen";
 import SKD from "./pages/SKD";
 import Sasaran from "./pages/Sasaran";
 import PerkembanganTerkini from "./pages/PerkembanganTerkini";
@@ -29,7 +31,9 @@ function App() {
         <Route path="/teroka/:nama_tema" element={<TerokaTema />} />
         <Route path="/sumber" element={<Sumber />} />
         <Route path="/sumber/:tajuk_sumber" element={<SumberInfo />} />
+        {/* <Route path="/teka" element={<Teka />} /> */}
         <Route path="/sumber-internet" element={<SumberInternet />} />
+        <Route path="/lesen" element={<Lesen />} />
         <Route path="/perihal" element={<Perihal />} />
         <Route path="/sasaran" element={<Sasaran />} />
         <Route path="/perkembangan" element={<PerkembanganTerkini />} />
