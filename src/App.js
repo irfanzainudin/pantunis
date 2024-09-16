@@ -9,7 +9,7 @@ import TerokaTema from "./pages/TerokaTema";
 import Sumber from "./pages/Sumber";
 import SumberInfo from "./pages/SumberInfo";
 import SumberInternet from "./pages/SumberInternet";
-import Teka from "./pages/Teka";
+// import Teka from "./pages/Teka";
 import Perihal from "./pages/Perihal";
 import Lesen from "./pages/Lesen";
 import SKD from "./pages/SKD";
