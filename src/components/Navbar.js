@@ -51,6 +51,11 @@ function Navbar() {
                 <i className="bi bi-book"></i> Sumber
               </Link>
             </li>
+            {/* <li className="nav-item">
+              <Link className="nav-link" to="/teka">
+                <i className="bi bi-patch-question-fill"></i> Teka
+              </Link>
+            </li> */}
             <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
@@ -84,6 +89,11 @@ function Navbar() {
                 <li>
                   <Link className="dropdown-item" to="/perihal">
                     <i className="bi bi-code-square"></i> Perihal Pembangunan
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/lesen">
+                    <i class="bi bi-info-circle"></i> Lesen
                   </Link>
                 </li>
                 {/* TODO: get an workspace (email, domain etc.) first, then setup a "Contact Us" page */}
