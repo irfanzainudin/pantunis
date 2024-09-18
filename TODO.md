@@ -28,3 +28,14 @@ Deploy along with new datasets (ideally ATMA's because it's large so a Teroka pa
 
 - [ ] Populate the homepage instead of navigating to a new page for the search results
 - [ ] Test more designs to left-align the text in ModalPantun to make it more neat
+
+
+## From Mern Stack course
+
+```css
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+```
