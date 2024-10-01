@@ -12,10 +12,12 @@ import SumberInternet from "./pages/SumberInternet";
 // import Teka from "./pages/Teka";
 import Perihal from "./pages/Perihal";
 import Lesen from "./pages/Lesen";
-import SKD from "./pages/SKD";
+// import SKD from "./pages/SKD";
 import Sasaran from "./pages/Sasaran";
 import PerkembanganTerkini from "./pages/PerkembanganTerkini";
 import HalamanHilang from "./pages/HalamanHilang";
+// SUMBANGAN
+// import Sumbang from "./pages/Sumbang";
 
 function App() {
   return (
@@ -37,7 +39,9 @@ function App() {
         <Route path="/perihal" element={<Perihal />} />
         <Route path="/sasaran" element={<Sasaran />} />
         <Route path="/perkembangan" element={<PerkembanganTerkini />} />
-        <Route path="/skd" element={<SKD />} />
+        {/* <Route path="/skd" element={<SKD />} /> */}
+        {/* SUMBANGAN */}
+        {/* <Route path="/sumbang" element={<Sumbang />} /> */}
         <Route path="/*" element={<HalamanHilang />} />
       </Routes>
       {/* <Footer /> */}
