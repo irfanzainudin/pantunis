@@ -1,6 +1,20 @@
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import RSI from "./RandomSumbanganIcon";
 
 function Navbar() {
+  const [darkMode, setDarkMode] = useState(false);
+  // const route = useLocation().pathname;
+
+  useEffect(() => {
+    const bodyTheme = document.documentElement.attributes.getNamedItem("data-bs-theme");
+    if (darkMode) {
+      bodyTheme.value = "dark";
+    } else {
+      bodyTheme.value = "light";
+    }
+  }, [darkMode])
+  
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -51,11 +65,18 @@ function Navbar() {
                 <i className="bi bi-book"></i> Sumber
               </Link>
             </li>
-            {/* <li className="nav-item">
-              <Link className="nav-link" to="/teka">
-                <i className="bi bi-patch-question-fill"></i> Teka
+            <li className="nav-item">
+              <Link className="nav-link disabled" to="/teka">
+                <i className="bi bi-patch-question"></i> Teka
               </Link>
-            </li> */}
+            </li>
+            <li>
+              <Link className="nav-link disabled" to="/sumbang">
+                <RSI />
+                {' '}
+                Sumbangan Pantun <span className="badge bg-secondary">Akan Datang</span>
+              </Link>
+            </li>
             <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
@@ -105,6 +126,39 @@ function Navbar() {
               </ul>
             </li>
           </ul>
+          {/* { route !== "/sumbang"
+          ?
+          <Link to="/sumbang" className="btn btn-primary disabled">
+            Sumbangan Pantun
+            <br/>
+            <span className="badge bg-secondary">Akan Datang</span>
+          </Link>
+          :
+          <></>} */}
+          <div class="form-check form-switch form-check-reverse">
+            <input
+            class="form-check-input"
+            type="checkbox"
+            id="flexSwitchCheckReverse"
+            value={darkMode}
+            onChange={() => {
+              if (darkMode) {
+                setDarkMode(false);
+              } else {
+                setDarkMode(true);
+              }
+            }}
+            />
+            <label class="form-check-label" for="flexSwitchCheckReverse">
+              {
+              darkMode
+              ?
+              <i class="bi bi-moon-stars"></i>
+              :
+              <i class="bi bi-sun"></i>
+              }
+            </label>
+          </div>
         </div>
       </div>
     </nav>
