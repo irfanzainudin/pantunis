@@ -28,6 +28,12 @@
   justify-content: center;
 }
 
+.disiderata-sumber {
+  text-align: left;
+  width: 80vw;
+  margin: auto;
+}
+
 /* iPhone 12/13 Pro Max iOS 14.6 */
 @media (max-width: 428px) {
   .sumber {
@@ -41,5 +47,9 @@
 
   .lsgr-container {
     width: 80%;
+  }
+
+  .disiderata-sumber {
+    width: 100vw;
   }
 }
