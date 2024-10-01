@@ -6,10 +6,12 @@ import "./Teroka.css";
 function Teroka() {
   return (
     <main className="mt-3 animate__animated animate__fadeIn">
-      <h1>
-        <i className="bi bi-compass"></i> Teroka
-      </h1>
-      <h2 className="fs-6">Terokai Pantunis mengikut tema</h2>
+      <hgroup>
+        <h1>
+          <i className="bi bi-compass"></i> Teroka
+        </h1>
+        <p className="fs-6">Terokai Pantunis mengikut tema</p>
+      </hgroup>
       <div className="tema-tema">
         {Object.keys(kamusTema).map((key, i) => {
           var val = kamusTema[key];
