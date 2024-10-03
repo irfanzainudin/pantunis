@@ -37,6 +37,10 @@
   margin-right: 5px;
 }
 
+.info-lebih {
+  width: inherit;
+}
+
 /* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait and Landscape */

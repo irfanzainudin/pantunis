@@ -8,6 +8,26 @@ function Pantun4Kerat(props) {
   const pantun = props.children;
   const kata = props.kata;
 
+  const whichSrc = (sumber) => {
+    console.log(sumber);
+    if (sumber === "Pantun Melayu")
+    {
+      return <Link to={"/sumber/pantun-melayu"}>Pantun Melayu</Link>;
+    }
+    else if (sumber === "KUMPULAN PANTUN LISAN MELAYU: KURIK KUNDI MERAH SAGA EDISI KEDUA")
+    {
+      return <Link to={"/sumber/kumpulan-pantun-lisan-melayu:-kurik-kundi-merah-saga-edisi-kedua"}>Kurik Kundi Merah Saga</Link>;
+    }
+    else if (sumber === "Koleksi \"Sejuta Pantun\" oleh Portal Malaycivilization")
+    {
+      return <Link to={"/sumber/koleksi-\"sejuta-pantun\"-oleh-portal-malaycivilization"}>Sejuta Pantun</Link>;
+    }
+    else if (sumber === "Malay Pantuns")
+    {
+      return <Link to={"/sumber/malay-pantuns"}>Malay Pantuns</Link>;
+    }
+  }
+
   return (
     <div className="pantun m-5">
       <section className="pantun-action-col">
@@ -39,7 +59,9 @@ function Pantun4Kerat(props) {
         </small>{" "} */}
         <small className="text-muted">
           ——— dari <Link to={"/sumber"}>{pantun.sumber_tajuk}</Link>
+          {/* ——— dari {whichSrc(pantun.sumber_tajuk)} */}
         </small>
+        {/* <Link to={"/sumber"} className="btn btn-primary info-lebih">Info lebih</Link> */}
       </section>
     </div>
   );
