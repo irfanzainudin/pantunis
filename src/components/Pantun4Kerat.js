@@ -39,6 +39,12 @@ function Pantun4Kerat(props) {
         >
           <i className="bi bi-info-circle-fill fs-2"></i>
         </button>
+        {/* <Link
+          className="btn text-primary"
+          to={`/pantun/${pantun.pantun_id}`}
+        >
+          <i className="bi bi-arrow-right-square-fill fs-2"></i>
+        </Link> */}
         <ModalPantun pantun={pantun} />
       </section>
       <section className="pantun-span">
