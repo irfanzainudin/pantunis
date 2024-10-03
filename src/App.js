@@ -4,12 +4,14 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import HalamanUtama from "./pages/HalamanUtama";
 import Cari from "./pages/Cari";
+import Pantun from "./pages/Pantun";
 import Teroka from "./pages/Teroka";
 import TerokaTema from "./pages/TerokaTema";
 import Sumber from "./pages/Sumber";
 import SumberInfo from "./pages/SumberInfo";
 import SumberInternet from "./pages/SumberInternet";
-// import Teka from "./pages/Teka";
+import Teka from "./pages/Teka";
+import TekaKata from "./pages/TekaKata";
 import Perihal from "./pages/Perihal";
 import Lesen from "./pages/Lesen";
 // import SKD from "./pages/SKD";
@@ -29,19 +31,28 @@ function App() {
         <Route exact path="/" element={<HalamanUtama />} />
         {/* <Route path="/halaman-utama" element={<HalamanUtama />} /> */}
         <Route path="/cari" element={<Cari />} />
+        {/* PANTUN */}
+        <Route path="/pantun/:id" element={<Pantun />} />
         <Route path="/teroka" element={<Teroka />} />
+        {/* TODO: TerokaTema needs to fetch data from somewhere else */}
+        {/* ... otherwise, if people go directly to the page, it'll be blank */}
         <Route path="/teroka/:nama_tema" element={<TerokaTema />} />
         <Route path="/sumber" element={<Sumber />} />
+        {/* TODO: SumberInfo needs to fetch data from somewhere else */}
+        {/* ... otherwise, if people go directly to the page, it'll be blank */}
         <Route path="/sumber/:tajuk_sumber" element={<SumberInfo />} />
-        {/* <Route path="/teka" element={<Teka />} /> */}
         <Route path="/sumber-internet" element={<SumberInternet />} />
         <Route path="/lesen" element={<Lesen />} />
         <Route path="/perihal" element={<Perihal />} />
         <Route path="/sasaran" element={<Sasaran />} />
         <Route path="/perkembangan" element={<PerkembanganTerkini />} />
         {/* <Route path="/skd" element={<SKD />} /> */}
+        {/* TEKA */}
+        <Route path="/teka" element={<Teka />} />
+        <Route path="/teka/kata" element={<TekaKata />} />
         {/* SUMBANGAN */}
         {/* <Route path="/sumbang" element={<Sumbang />} /> */}
+        {/* 404 */}
         <Route path="/*" element={<HalamanHilang />} />
       </Routes>
       {/* <Footer /> */}
