@@ -34,5 +34,5 @@ Dockerfile
 
 # Unreleased features/components
 src/components/StylishButton.*
-src/pages/Teka.*
+# src/pages/Teka.*
 src/pages/Sumbang.*
