@@ -1,0 +1,72 @@
+/* FACEBOOK */
+#share-on-fb {
+    color: white;
+    background-color: #1877F2;
+}
+
+#share-on-fb:hover {
+    opacity: 80%;
+}
+
+/* WHATSAPP */
+#share-on-wa {
+    color: white;
+    background-color: #25D366;
+}
+
+#share-on-wa:hover {
+    opacity: 80%;
+}
+
+/* X / TWITTER */
+[data-bs-theme=dark] #share-on-x {
+    /* color: white; */
+    background-color: #000000;
+}
+
+#share-on-x {
+    color: white;
+    background-color: #000000;
+    /* background-image: linear-gradient(to right, #000000 0%, #1DA1F2 100%); */
+}
+
+#share-on-x:hover {
+    opacity: 80%;
+}
+
+/* TWITTER */
+[data-bs-theme=dark] #share-on-tw {
+    /* color: white; */
+    background-color: #000000;
+}
+
+#share-on-tw {
+    color: white;
+    background-color: #1DA1F2;
+    /* background-image: linear-gradient(to right, #000000 0%, #1DA1F2 100%); */
+}
+
+#share-on-tw:hover {
+    opacity: 80%;
+}
+
+/* INSTAGRAM */
+#share-on-ig {
+    color: white;
+    /* border: solid 10px linear-gradient(to right, #4564dc 0%, #aa2cc0 20%, #ec0075 40%, #ff6903 60%, #ffd366 80%); */
+    border: none;
+    background-image: linear-gradient(to right, #4564dc 0%, #aa2cc0 20%, #ec0075 40%, #ff6903 60%, #ffd366 80%);
+}
+
+#share-on-ig:hover {
+    opacity: 80%;
+}
+
+#share-on-li {
+    color: white;
+    background-color: #0a66c2;
+}
+
+#share-on-li:hover {
+    opacity: 80%;
+}

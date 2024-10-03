@@ -1,3 +1,6 @@
+import ShareTo from "./ShareToSocialMediaButton";
+import "./ModalPantun.css";
+
 function ModalPantun(props) {
   const pantun = props.pantun;
 
@@ -72,6 +75,13 @@ function ModalPantun(props) {
                 </tr>
               </tbody>
             </table>
+            <div class="d-grid gap-2">
+              <ShareTo socmed="facebook" socmedAbbreviation="fb" pantun={pantun}/>
+              <ShareTo socmed="whatsapp" socmedAbbreviation="wa" pantun={pantun}/>
+              <ShareTo socmed="twitter-x" socmedAbbreviation="x" pantun={pantun}/>
+              <ShareTo socmed="instagram" socmedAbbreviation="ig" pantun={pantun}/>
+              <ShareTo socmed="linkedin" socmedAbbreviation="li" pantun={pantun}/>
+            </div>
           </div>
         </div>
       </div>
