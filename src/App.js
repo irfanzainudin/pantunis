@@ -3,7 +3,9 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import HalamanUtama from "./pages/HalamanUtama";
+import CKT from "./pages/CKT";
 import Cari from "./pages/Cari";
+import CarianTepat from "./pages/CarianTepat";
 import Pantun from "./pages/Pantun";
 import Teroka from "./pages/Teroka";
 import TerokaTema from "./pages/TerokaTema";
@@ -29,8 +31,10 @@ function App() {
       </header>
       <Routes>
         <Route exact path="/" element={<HalamanUtama />} />
+        <Route path="/ckt" element={<CKT />} />
         {/* <Route path="/halaman-utama" element={<HalamanUtama />} /> */}
         <Route path="/cari" element={<Cari />} />
+        <Route path="/carianTepat" element={<CarianTepat />} />
         {/* PANTUN */}
         <Route path="/pantun/:id" element={<Pantun />} />
         <Route path="/teroka" element={<Teroka />} />

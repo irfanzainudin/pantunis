@@ -56,6 +56,11 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/ckt">
+                <i className="bi bi-bullseye"></i> CKT <span className="badge bg-secondary">Percubaan</span>
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link" to="/teroka">
                 <i className="bi bi-compass"></i> Teroka
               </Link>
