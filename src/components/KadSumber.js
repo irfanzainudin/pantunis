@@ -27,7 +27,7 @@ function KadSumber({ tajuk, penulis, pautan, imej, nota }) {
               className="btn btn-primary"
               state={sumber_info}
             >
-              Ketahui lebih
+              Info lebih
             </Link>
           </div>
         </div>
@@ -55,7 +55,7 @@ function KadSumber({ tajuk, penulis, pautan, imej, nota }) {
               className="btn btn-primary"
               state={sumber_info}
             >
-              Ketahui lebih
+              Info lebih
             </Link>
           </div>
         </div>
