@@ -99,7 +99,7 @@ function Sumber() {
         <h2>
           <i className="bi bi-card-list"></i> Disiderata
         </h2>
-        <p>Senarai sumber yang ingin disimpan di dalam Pantunis (diambil daripada <a href="http://pantun.com/rujukan.html">pantun.com/rujukan.html</a>)</p>
+        <p>Senarai sumber yang ingin disimpan di dalam Pantunis<br/>(diambil daripada <a href="http://pantun.com/rujukan.html">pantun.com/rujukan.html</a>)</p>
       </hgroup>
       <div className="disiderata-sumber">
         <ol>
