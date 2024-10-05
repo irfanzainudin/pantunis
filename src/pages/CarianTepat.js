@@ -87,7 +87,7 @@ function CarianTepat() {
           </div>
           <div className="col-auto">
             <span id="cariPantunHelp" className="form-text teks-hasil-carian">
-              Tekan 'Enter' untuk cari.
+              Tekan <kbd>Enter</kbd> untuk cari.
             </span>
           </div>
         </div>
@@ -129,7 +129,7 @@ function CarianTepat() {
           </div>
           <div className="col-auto">
             <span id="cariPantunHelp" className="form-text">
-              Tekan 'Enter' untuk cari.
+              Tekan <kbd>Enter <i class="bi bi-arrow-return-left"></i></kbd> untuk cari.
             </span>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
+import getRandomIntegerInclusive from '../utils/getRandomIntegerInclusive';
 
 const Emoji = props => (
     <span
@@ -11,14 +12,6 @@ const Emoji = props => (
         {props.symbol}
     </span>
 );
-
-// Taken from: https://coreui.io/blog/how-to-generate-a-random-number-in-javascript/
-const getRandomIntegerInclusive = (min, max) => {
-    min = Math.ceil(min)
-    max = Math.floor(max)
-
-    return Math.floor(Math.random() * (max - min + 1)) + min
-}
 
 function random() {
     var rid = getRandomIntegerInclusive(0, 4);
@@ -86,7 +79,7 @@ function TekaKataComponent() {
                     </div>
                 </form>
             </div>
-            <p className='mt-3'>Please press <kbd>Enter</kbd> when you're done typing</p>
+            <p className='mt-3'>Please press <kbd>Enter <i class="bi bi-arrow-return-left"></i></kbd> when you're done typing</p>
             {/* <Link to='/' className="btn btn-primary">Home</Link> */}
         </div>
     );

@@ -3,6 +3,7 @@ import axios from "axios";
 import Pantun from "../components/Pantun";
 import { useSearchParams } from "react-router-dom";
 import "./Cari.css";
+import getRandomIntegerInclusive from "../utils/getRandomIntegerInclusive";
 
 // TODO: I don't think we need this
 let headers = {
@@ -50,6 +51,16 @@ function Cari() {
       });
   };
 
+  const getRandomWords = () => {
+    const words = [
+      "pantun",
+      "love",
+      "Pecah kaca"
+    ];
+
+    return words[getRandomIntegerInclusive(0, words.length - 1)];
+  }
+
   // Show loading while fetching data
   if (loading)
     return (
@@ -81,22 +92,30 @@ function Cari() {
               name="kata"
               className="form-control"
               aria-describedby="cariPantunHelp"
+              placeholder={"Contoh: \"" + getRandomWords() + "\""}
+              // style={{textAlign: "center"}}
               autoFocus
               onChange={handleChange}
             />
           </div>
           <div className="col-auto">
             <span id="cariPantunHelp" className="form-text teks-hasil-carian">
-              Tekan 'Enter' untuk cari.
+              Tekan <kbd>Enter</kbd> untuk cari.
             </span>
           </div>
         </div>
+        {/* <button type="submit" className="btn btn-primary animate__animated animate__fadeInUp">
+          Cari
+        </button> */}
       </form>
       <span className="text-muted teks-hasil-carian">
         Kami jumpa {pantun.length} pantun untuk kata "{kata}".
       </span>
       <span className="text-muted teks-hasil-carian mb-3">
         Tekan ikon untuk ketahui info lebih.
+      </span>
+      <span className="form-text teks-hasil-carian mb-3">
+        Tekan <kbd>Enter <i class="bi bi-arrow-return-left"></i></kbd> untuk cari.
       </span>
       <div className="pantun-pantun">
         {pantun.length > 0
@@ -129,7 +148,7 @@ function Cari() {
           </div>
           <div className="col-auto">
             <span id="cariPantunHelp" className="form-text">
-              Tekan 'Enter' untuk cari.
+              Tekan <kbd>Enter <i class="bi bi-arrow-return-left"></i></kbd> untuk cari.
             </span>
           </div>
         </div>
