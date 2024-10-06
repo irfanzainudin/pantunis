@@ -11,6 +11,7 @@ import Teroka from "./pages/Teroka";
 import TerokaTema from "./pages/TerokaTema";
 import Sumber from "./pages/Sumber";
 import SumberInfo from "./pages/SumberInfo";
+import SumberTeroka from "./pages/SumberTeroka";
 import SumberInternet from "./pages/SumberInternet";
 import Teka from "./pages/Teka";
 import TekaKata from "./pages/TekaKata";
@@ -38,13 +39,16 @@ function App() {
         {/* PANTUN */}
         <Route path="/pantun/:id" element={<Pantun />} />
         <Route path="/teroka" element={<Teroka />} />
-        {/* TODO: TerokaTema needs to fetch data from somewhere else */}
-        {/* ... otherwise, if people go directly to the page, it'll be blank */}
+        {/* TODO: TerokaTema needs to fetch data from somewhere else
+                  ... otherwise, if people go directly to the page, it'll be blank */}
         <Route path="/teroka/:nama_tema" element={<TerokaTema />} />
         <Route path="/sumber" element={<Sumber />} />
-        {/* TODO: SumberInfo needs to fetch data from somewhere else */}
-        {/* ... otherwise, if people go directly to the page, it'll be blank */}
+        {/* TODO: SumberInfo needs to fetch data from somewhere else
+                  ... otherwise, if people go directly to the page, it'll be blank */}
         <Route path="/sumber/:tajuk_sumber" element={<SumberInfo />} />
+        {/* TODO: SumberTeroka needs to fetch data from somewhere else
+                  ... otherwise, if people go directly to the page, it'll be blank */}
+        <Route path="/sumber/teroka/:tajuk_sumber" element={<SumberTeroka />} />
         <Route path="/sumber-internet" element={<SumberInternet />} />
         <Route path="/lesen" element={<Lesen />} />
         <Route path="/perihal" element={<Perihal />} />

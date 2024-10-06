@@ -11,6 +11,7 @@ import In from "../media/Internet.png";
 
 const sumber_sumber = [
   {
+    id: "1",
     tajuk: "Pantun Melayu",
     penulis: "Richard J. Wilkinson and Sir R.O. Winstedt",
     pautan:
@@ -19,6 +20,7 @@ const sumber_sumber = [
     nota: "published",
   },
   {
+    id: "5",
     tajuk: "Malay Pantuns",
     penulis: "A. W. Hamilton",
     pautan:
@@ -27,6 +29,7 @@ const sumber_sumber = [
     nota: "published",
   },
   {
+    id: "2",
     tajuk: "KUMPULAN PANTUN LISAN MELAYU: KURIK KUNDI MERAH SAGA EDISI KEDUA",
     penulis: "Dewan Bahasa Dan Pustaka",
     pautan: "https://dbpniaga.my/Inventori/Detail_Inventori?i=MzM1",
@@ -34,6 +37,7 @@ const sumber_sumber = [
     nota: "draft",
   },
   {
+    id: "6",
     tajuk: 'Koleksi "Sejuta Pantun" oleh Portal Malaycivilization',
     penulis:
       "Institut Alam dan Tamadun Melayu (ATMA), Universiti Kebangsaan Malaysia",
@@ -42,6 +46,7 @@ const sumber_sumber = [
     nota: "draft",
   },
   {
+    id: "3",
     tajuk: "Budaya Melayu",
     penulis: "Orang Melayu",
     pautan: "https://pantunis.com",
@@ -49,6 +54,7 @@ const sumber_sumber = [
     nota: "published",
   },
   {
+    id: "4",
     tajuk: "Internet",
     penulis: "Netizen",
     pautan: "/sumber-internet",
@@ -56,6 +62,7 @@ const sumber_sumber = [
     nota: "published",
   },
   // {
+  //   id: "7",
   //   tajuk: "Alam Pantun Melayu: Studies on the Malay Pantun",
   //   penulis: "Francois-Rene Daillie",
   //   pautan:
@@ -85,6 +92,7 @@ function Sumber() {
           ? sumber_sumber.map((ss) => {
               return (
                 <KadSumber
+                  id={ss.id}
                   tajuk={ss.tajuk}
                   penulis={ss.penulis}
                   pautan={ss.pautan}
