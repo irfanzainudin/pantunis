@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Pantunis",
+  "name": "Pantunis: The largest database of pantun on the Internet",
   "icons": [
     {
       "src": "favicon.ico",
