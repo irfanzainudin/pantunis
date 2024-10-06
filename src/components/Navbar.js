@@ -119,7 +119,7 @@ function Navbar() {
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/lesen">
-                    <i class="bi bi-info-circle"></i> Lesen
+                    <i className="bi bi-info-circle"></i> Lesen
                   </Link>
                 </li>
                 {/* TODO: get an workspace (email, domain etc.) first, then setup a "Contact Us" page */}
@@ -140,9 +140,9 @@ function Navbar() {
           </Link>
           :
           <></>} */}
-          <div class="form-check form-switch form-check-reverse">
+          <div className="form-check form-switch form-check-reverse">
             <input
-            class="form-check-input"
+            className="form-check-input"
             type="checkbox"
             id="flexSwitchCheckReverse"
             value={darkMode}
@@ -154,13 +154,13 @@ function Navbar() {
               }
             }}
             />
-            <label class="form-check-label" for="flexSwitchCheckReverse">
+            <label className="form-check-label" for="flexSwitchCheckReverse">
               {
               darkMode
               ?
-              <i class="bi bi-moon-stars"></i>
+              <i className="bi bi-moon-stars"></i>
               :
-              <i class="bi bi-sun"></i>
+              <i className="bi bi-sun"></i>
               }
             </label>
           </div>

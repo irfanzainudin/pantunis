@@ -85,7 +85,7 @@ function PantunPage() {
         <p>Dari {pantun.sumber_tajuk}</p>
         <p>Oleh {pantun.sumber_pengkarya}</p>
         <Link to="/anon" className="btn btn-lg btn-primary me-3 disabled">
-          <i class="bi bi-person-fill-check"></i> Tafsiran Pakar<br/><span className="badge bg-secondary">Akan Datang</span>
+          <i className="bi bi-person-fill-check"></i> Tafsiran Pakar<br/><span className="badge bg-secondary">Akan Datang</span>
         </Link>
         <Link to="/login" className="btn btn-lg btn-primary disabled">
           <i className="bi bi-person-circle"></i> Tafsiran Komuniti<br/><span className="badge bg-secondary">Akan Datang</span>

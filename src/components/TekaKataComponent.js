@@ -67,10 +67,10 @@ function TekaKataComponent() {
             <p className="fs-3">{input ? input : "..."}</p>
             <div className="playPageInputContainer">
                 <form onSubmit={check}>
-                    <div class="form-group">
+                    <div className="form-group">
                         <input
                             type="text"
-                            class="form-control playPageInput w-50 mx-auto"
+                            className="form-control playPageInput w-50 mx-auto"
                             aria-describedby="answerHelp"
                             value={input}
                             onChange={handleChange}
@@ -79,7 +79,7 @@ function TekaKataComponent() {
                     </div>
                 </form>
             </div>
-            <p className='mt-3'>Please press <kbd>Enter <i class="bi bi-arrow-return-left"></i></kbd> when you're done typing</p>
+            <p className='mt-3'>Please press <kbd>Enter <i className="bi bi-arrow-return-left"></i></kbd> when you're done typing</p>
             {/* <Link to='/' className="btn btn-primary">Home</Link> */}
         </div>
     );

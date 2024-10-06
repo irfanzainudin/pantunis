@@ -75,7 +75,7 @@ function ModalPantun(props) {
                 </tr>
               </tbody>
             </table>
-            <div class="d-grid gap-2">
+            <div className="d-grid gap-2">
               <ShareTo socmed="facebook" socmedAbbreviation="fb" pantun={pantun}/>
               <ShareTo socmed="whatsapp" socmedAbbreviation="wa" pantun={pantun}/>
               <ShareTo socmed="twitter-x" socmedAbbreviation="x" pantun={pantun}/>

@@ -4,10 +4,10 @@ function Lesen() {
     return (
       <main className="App-main animate__animated animate__fadeIn">
         <h1>Lesen</h1>
-        <p>Rujuk kod sumber di <a href="https://github.com/irfanzainudin/pantunis">repositori <i class="bi bi-github"></i> Github rasmi Pantunis</a>.</p>
+        <p>Rujuk kod sumber di <a href="https://github.com/irfanzainudin/pantunis">repositori <i className="bi bi-github"></i> Github rasmi Pantunis</a>.</p>
         <article id="lesen">
             <p>
-                Copyright {new Date().getFullYear()} <i class="bi bi-c-circle"></i> Perisiana
+                Copyright {new Date().getFullYear()} <i className="bi bi-c-circle"></i> Perisiana
             </p>
             <p>
                 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:

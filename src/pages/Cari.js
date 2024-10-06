@@ -115,7 +115,7 @@ function Cari() {
         Tekan ikon untuk ketahui info lebih.
       </span>
       <span className="form-text teks-hasil-carian mb-3">
-        Tekan <kbd>Enter <i class="bi bi-arrow-return-left"></i></kbd> untuk cari.
+        Tekan <kbd>Enter <i className="bi bi-arrow-return-left"></i></kbd> untuk cari.
       </span>
       <div className="pantun-pantun">
         {pantun.length > 0
@@ -148,7 +148,7 @@ function Cari() {
           </div>
           <div className="col-auto">
             <span id="cariPantunHelp" className="form-text">
-              Tekan <kbd>Enter <i class="bi bi-arrow-return-left"></i></kbd> untuk cari.
+              Tekan <kbd>Enter <i className="bi bi-arrow-return-left"></i></kbd> untuk cari.
             </span>
           </div>
         </div>

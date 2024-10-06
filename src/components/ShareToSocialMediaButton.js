@@ -55,7 +55,7 @@ function ShareToSocialMediaButton({ socmed, socmedAbbreviation, pantun })
     return socmedAbbreviation === "ig" || socmedAbbreviation === "li" ? (
         <a
             type="button"
-            class="btn btn-lg disabled"
+            className="btn btn-lg disabled"
             id={`share-on-${socmedAbbreviation}`}
             href={whichSocMed()}
             target="_blank"
@@ -68,7 +68,7 @@ function ShareToSocialMediaButton({ socmed, socmedAbbreviation, pantun })
         (
         <a
             type="button"
-            class="btn btn-lg"
+            className="btn btn-lg"
             id={`share-on-${socmedAbbreviation}`}
             href={whichSocMed()}
             target="_blank"
