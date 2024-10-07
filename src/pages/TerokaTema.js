@@ -63,24 +63,25 @@ function TerokaTema() {
   };
 
   const getFilteredPantunList = () => {
-    // Return list of pantun for rendering
+    // Process and return list of pantun for rendering
+
     if (pantun.length > 0) {
       
       if (saringKeyword.length > 0) {
-        // Only perform filtering if saring "keyword" available
-        return pantun.filter((pantun, index, array) => {
+        // Only perform filtering when saring "keyword" available
+        return pantun.filter((p, index, array) => {
           const filterCheck =
-            pantun.pantun_bayang1.toLowerCase().includes(saringKeyword) ||
-            pantun.pantun_bayang2.toLowerCase().includes(saringKeyword) ||
-            pantun.pantun_maksud1.toLowerCase().includes(saringKeyword) ||
-            pantun.pantun_maksud2.toLowerCase().includes(saringKeyword);
+            p.pantun_bayang1.toLowerCase().includes(saringKeyword) ||
+            p.pantun_bayang2.toLowerCase().includes(saringKeyword) ||
+            p.pantun_maksud1.toLowerCase().includes(saringKeyword) ||
+            p.pantun_maksud2.toLowerCase().includes(saringKeyword);
           
           return filterCheck;
           } 
         );
 
       } else {
-        // Return all pantun since saring "word" unavailable
+        // Return all pantun since saring "keyword" unavailable
         return pantun;
       }
       
@@ -123,8 +124,8 @@ function TerokaTema() {
       </span>
    
       <div className="pantun-pantun">
-        {filteredPantunList.map((pantun, index) => {
-            return <Pantun kata={saringKeyword} key={index}>{pantun}</Pantun>;
+        {filteredPantunList.map((p, index) => {
+            return <Pantun kata={saringKeyword} key={index}>{p}</Pantun>;
           })
         }
       </div>
