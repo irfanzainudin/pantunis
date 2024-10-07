@@ -87,7 +87,7 @@ function CarianTepat() {
           </div>
           <div className="col-auto">
             <span id="cariPantunHelp" className="form-text teks-hasil-carian">
-              Tekan <kbd>Enter</kbd> untuk cari.
+              Tekan <kbd>Enter <i className="bi bi-arrow-return-left"></i></kbd> untuk cari.
             </span>
           </div>
         </div>
@@ -97,6 +97,9 @@ function CarianTepat() {
       </span>
       <span className="text-muted teks-hasil-carian mb-3">
         Tekan ikon untuk ketahui info lebih.
+      </span>
+      <span id="mobileCariPantunHelp" className="form-text teks-hasil-carian mb-3">
+        Tekan <kbd>Enter <i className="bi bi-arrow-return-left"></i></kbd> untuk cari.
       </span>
       <div className="pantun-pantun">
         {pantun.length > 0

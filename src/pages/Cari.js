@@ -100,7 +100,7 @@ function Cari() {
           </div>
           <div className="col-auto">
             <span id="cariPantunHelp" className="form-text teks-hasil-carian">
-              Tekan <kbd>Enter</kbd> untuk cari.
+              Tekan <kbd>Enter <i className="bi bi-arrow-return-left"></i></kbd> untuk cari.
             </span>
           </div>
         </div>
@@ -114,7 +114,7 @@ function Cari() {
       <span className="text-muted teks-hasil-carian mb-3">
         Tekan ikon untuk ketahui info lebih.
       </span>
-      <span className="form-text teks-hasil-carian mb-3">
+      <span id="mobileCariPantunHelp" className="form-text teks-hasil-carian mb-3">
         Tekan <kbd>Enter <i className="bi bi-arrow-return-left"></i></kbd> untuk cari.
       </span>
       <div className="pantun-pantun">
