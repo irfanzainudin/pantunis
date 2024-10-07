@@ -15,9 +15,11 @@ let headers = {
 
 function TerokaTema() {
   const { tema_id, nama_tema } = useLocation().state;
-  const [filteredPantun, setFilteredPantun] = useState("");
+  const [saringKeyword, setSaringKeyword] = useState("");
   const [pantun, setPantun] = useState("");
   const [loading, setLoading] = useState(true);
+
+  let filteredPantunList = []; // Contains the list of pantun to be rendered
 
   useEffect(() => {
     handleSubmit();
@@ -57,8 +59,39 @@ function TerokaTema() {
     );
 
   const handleChange = (e) => {
-    setFilteredPantun(e.target.value);
+    setSaringKeyword(e.target.value);
   };
+
+  const getFilteredPantunList = () => {
+    // Return list of pantun for rendering
+    if (pantun.length > 0) {
+      
+      if (saringKeyword.length > 0) {
+        // Only perform filtering if saring "keyword" available
+        return pantun.filter((pantun, index, array) => {
+          const filterCheck =
+            pantun.pantun_bayang1.toLowerCase().includes(saringKeyword) ||
+            pantun.pantun_bayang2.toLowerCase().includes(saringKeyword) ||
+            pantun.pantun_maksud1.toLowerCase().includes(saringKeyword) ||
+            pantun.pantun_maksud2.toLowerCase().includes(saringKeyword);
+          
+          return filterCheck;
+          } 
+        );
+
+      } else {
+        // Return all pantun since saring "word" unavailable
+        return pantun;
+      }
+      
+    } else {
+      // Return empty array since no pantun exist
+      return [];
+    }
+  }
+
+  // Call pantun filtering function before render
+  filteredPantunList = getFilteredPantunList();
 
   return (
     <main className="d-flex flex-column justify-content-between align-items-center my-3">
@@ -76,33 +109,24 @@ function TerokaTema() {
           Saring pantun guna perkataan.
         </div>
       </section>
-      {filteredPantun.length > 0 ? (
+      {saringKeyword.length > 0 ? (
         <span className="text-muted" style={{ fontSize: "smaller" }}>
-          Kami jumpa {filteredPantun.length} pantun untuk tema: {nama_tema}.
+          Kami jumpa {filteredPantunList.length} pantun untuk tema: {nama_tema}.
         </span>
       ) : (
         <span className="text-muted" style={{ fontSize: "smaller" }}>
-          Kami jumpa {pantun.length} pantun untuk tema: {nama_tema}.
+          Kami jumpa {filteredPantunList.length} pantun untuk tema: {nama_tema}.
         </span>
       )}
       <span className="text-muted mb-3" style={{ fontSize: "smaller" }}>
         Tekan ikon untuk ketahui info lebih.
       </span>
+   
       <div className="pantun-pantun">
-        {pantun.length > 0
-          ? pantun.map((p) => {
-              const filterCheck =
-                p.pantun_bayang1.toLowerCase().includes(filteredPantun) ||
-                p.pantun_bayang2.toLowerCase().includes(filteredPantun) ||
-                p.pantun_maksud1.toLowerCase().includes(filteredPantun) ||
-                p.pantun_maksud2.toLowerCase().includes(filteredPantun);
-              if (filterCheck) {
-                return <Pantun kata={""}>{p}</Pantun>;
-              } else {
-                return <></>;
-              }
-            })
-          : ""}
+        {filteredPantunList.map((pantun, index) => {
+            return <Pantun kata={saringKeyword} key={index}>{pantun}</Pantun>;
+          })
+        }
       </div>
     </main>
   );
