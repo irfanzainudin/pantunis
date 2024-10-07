@@ -19,8 +19,6 @@ function TerokaTema() {
   const [pantun, setPantun] = useState("");
   const [loading, setLoading] = useState(true);
 
-  let filteredPantunList = []; // Contains the list of pantun to be rendered
-
   useEffect(() => {
     handleSubmit();
     // NOTE: the line below is for my annoying linter (I don't like warnings)
@@ -92,7 +90,7 @@ function TerokaTema() {
   }
 
   // Call pantun filtering function before render
-  filteredPantunList = getFilteredPantunList();
+  const pantunListToRender = getFilteredPantunList();
 
   return (
     <main className="d-flex flex-column justify-content-between align-items-center my-3">
@@ -112,11 +110,11 @@ function TerokaTema() {
       </section>
       {saringKeyword.length > 0 ? (
         <span className="text-muted" style={{ fontSize: "smaller" }}>
-          Kami jumpa {filteredPantunList.length} pantun untuk tema: {nama_tema}.
+          Kami jumpa {pantunListToRender.length} pantun untuk tema: {nama_tema}.
         </span>
       ) : (
         <span className="text-muted" style={{ fontSize: "smaller" }}>
-          Kami jumpa {filteredPantunList.length} pantun untuk tema: {nama_tema}.
+          Kami jumpa {pantunListToRender.length} pantun untuk tema: {nama_tema}.
         </span>
       )}
       <span className="text-muted mb-3" style={{ fontSize: "smaller" }}>
@@ -124,7 +122,7 @@ function TerokaTema() {
       </span>
    
       <div className="pantun-pantun">
-        {filteredPantunList.map((p, index) => {
+        {pantunListToRender.map((p, index) => {
             return <Pantun kata={saringKeyword} key={index}>{p}</Pantun>;
           })
         }
