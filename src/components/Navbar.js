@@ -56,7 +56,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/ckt">
+              <Link className="nav-link" aria-current="page" to="/ckt">
                 <i className="bi bi-bullseye"></i> CKT <span className="badge bg-secondary">Percubaan</span>
               </Link>
             </li>
@@ -70,18 +70,18 @@ function Navbar() {
                 <i className="bi bi-book"></i> Sumber
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link disabled" to="/teka">
                 <i className="bi bi-patch-question"></i> Teka
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link className="nav-link disabled" to="/sumbang">
                 <RSI />
                 {' '}
                 Sumbangan Pantun <span className="badge bg-secondary">Akan Datang</span>
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
@@ -130,40 +130,65 @@ function Navbar() {
                 </li> */}
               </ul>
             </li>
+            {/* <li className="nav-item dropdown">
+              <Link
+                className="nav-link dropdown-toggle"
+                to="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i className="bi bi-translate"></i> Bahasa
+              </Link>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" to="/sasaran">
+                    🇲🇾 Bahasa Malaysia
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/sasaran">
+                    🇬🇧 Bahasa Inggeris
+                  </Link>
+                </li>
+              </ul>
+            </li> */}
           </ul>
-          {/* { route !== "/sumbang"
-          ?
-          <Link to="/sumbang" className="btn btn-primary disabled">
-            Sumbangan Pantun
-            <br/>
-            <span className="badge bg-secondary">Akan Datang</span>
-          </Link>
-          :
-          <></>} */}
-          <div className="form-check form-switch form-check-reverse">
-            <input
-            className="form-check-input"
-            type="checkbox"
-            id="flexSwitchCheckReverse"
-            value={darkMode}
-            onChange={() => {
-              if (darkMode) {
-                setDarkMode(false);
-              } else {
-                setDarkMode(true);
-              }
-            }}
-            />
-            <label className="form-check-label" for="flexSwitchCheckReverse">
-              {
-              darkMode
-              ?
-              <i className="bi bi-moon-stars"></i>
-              :
-              <i className="bi bi-sun"></i>
-              }
-            </label>
-          </div>
+          {/* <div className="call-to-actions"> */}
+            {/* { route !== "/sumbang"
+            ?
+            <Link to="/sumbang" className="btn btn-primary disabled">
+              Sumbangan Pantun
+              <br/>
+              <span className="badge bg-secondary">Akan Datang</span>
+            </Link>
+            :
+            <></>} */}
+            <div className="form-check form-switch form-check-reverse">
+              <input
+              className="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheckReverse"
+              value={darkMode}
+              onChange={() => {
+                if (darkMode) {
+                  setDarkMode(false);
+                } else {
+                  setDarkMode(true);
+                }
+              }}
+              />
+              <label className="form-check-label" for="flexSwitchCheckReverse">
+                {
+                darkMode
+                ?
+                <i className="bi bi-moon-stars"></i>
+                :
+                <i className="bi bi-sun"></i>
+                }
+              </label>
+            </div>
+          {/* </div> */}
         </div>
       </div>
     </nav>
