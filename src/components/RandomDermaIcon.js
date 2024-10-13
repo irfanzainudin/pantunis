@@ -2,22 +2,24 @@
 import getRandomIntegerInclusive from "../utils/getRandomIntegerInclusive";
 
 function RandomDermaIcon() {
-    // rid = Random ID
-    const rid = getRandomIntegerInclusive(0, 2);
-    
-    if (rid === 1) {
-        return (
-            <i className="bi bi-chat-heart"></i>
-        );
-    } else if (rid === 2) {
-        return (
-            <i className="bi bi-chat-left-heart"></i>
-        );
-    } else {
-        return (
-            <i className="bi bi-heart"></i>
-        );
-    }
+    const icons = [
+        <i className="bi bi-chat-dots"></i>,
+        <i className="bi bi-chat-fill"></i>,
+        <i className="bi bi-chat-heart"></i>,
+        <i className="bi bi-chat-left"></i>,
+        <i className="bi bi-chat-left-dots"></i>,
+        <i className="bi bi-chat-left-heart"></i>,
+        <i className="bi bi-chat-left-quote"></i>,
+        <i className="bi bi-chat-left-quote-fill"></i>,
+        <i className="bi bi-chat-left-text"></i>,
+        <i className="bi bi-chat-left-text-fill"></i>,
+        <i className="bi bi-chat-quote"></i>,
+        <i className="bi bi-chat-quote-fill"></i>,
+        <i className="bi bi-chat"></i>
+    ];
+    const rid = getRandomIntegerInclusive(0, icons.length - 1); // rid = Random ID
+
+    return icons[rid];
 }
 
 export default RandomDermaIcon;
