@@ -73,7 +73,8 @@ function Pantun2Kerat() {
                         data-bs-dismiss="modal"
                         aria-label="Close"
                         ></button> */}
-                        <small>Every pantun will be licensed as "<i className="bi bi-c-circle"></i> All rights reserved" meaning you, the writer(s), the pemantun(s), own(s) the pantun. In a future update, we will allow the change of license to other licenses such as <a href="https://fairuse.stanford.edu/overview/public-domain/welcome/">the public domain</a> or <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a> if you ever wish to change it.</small>
+                        {/* <small>Every pantun will be licensed as "All rights reserved <i className="bi bi-c-circle"></i>" meaning you, the writer(s), the pemantun(s), own(s) the pantun. In a future update, we will allow the change of license to other licenses such as <a href="https://fairuse.stanford.edu/overview/public-domain/welcome/">the public domain</a> or <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a> if you ever wish to change it.</small> */}
+                        <small>Setiap pantun yang diderma akan dilesenkan sebagai "Hakcipta Terpelihara <i className="bi bi-c-circle"></i>" yang bermaksud pantun tersebut hak milik mutlak penulis. Ke depan, kami akan membuka ruang untuk penukaran lesen kepada <a href="https://ms.wikipedia.org/wiki/Domain_awam">domain awam</a> atau <a href="https://ms.wikipedia.org/wiki/Lesen_Creative_Commons">Lesen Creative Commons</a> jika anda mahu.</small>
                     </div>
                 </div>
             </div>
