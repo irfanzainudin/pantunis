@@ -24,6 +24,10 @@
   font-size: smaller;
 }
 
+#mobileCariPantunHelp {
+  display: none;
+}
+
 /* iPhone 12/13 Pro Max iOS 14.6 */
 @media (max-width: 560px) {
   #cari-pantun {
@@ -32,5 +36,9 @@
 
   #cariPantunHelp {
     display: none;
+  }
+
+  #mobileCariPantunHelp {
+    display: initial;
   }
 }
