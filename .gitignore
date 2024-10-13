@@ -35,4 +35,4 @@ Dockerfile
 # Unreleased features/components
 src/components/StylishButton.*
 # src/pages/Teka.*
-src/pages/Derma.*
+# src/pages/Derma.*

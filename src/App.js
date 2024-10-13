@@ -22,7 +22,9 @@ import Sasaran from "./pages/Sasaran";
 import PerkembanganTerkini from "./pages/PerkembanganTerkini";
 import HalamanHilang from "./pages/HalamanHilang";
 // DERMA
-// import Derma from "./pages/Derma";
+import Derma from "./pages/Derma";
+import Tetamu from "./pages/Tetamu";
+import LogMasuk from "./pages/LogMasuk";
 
 function App() {
   return (
@@ -59,7 +61,9 @@ function App() {
         <Route path="/teka" element={<Teka />} />
         <Route path="/teka/kata" element={<TekaKata />} />
         {/* DERMA */}
-        {/* <Route path="/derma" element={<Derma />} /> */}
+        <Route path="/derma" element={<Derma />} />
+        <Route path="/tetamu" element={<Tetamu />} />
+        <Route path="/logmasuk" element={<LogMasuk />} />
         {/* 404 */}
         <Route path="/*" element={<HalamanHilang />} />
       </Routes>

@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import RSI from "./RandomDermaIcon";
+import RDI from "./RandomDermaIcon";
 
 function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   const route = useLocation().pathname;
+  const excludedRoutes = [
+    "/derma"
+  ]
 
   useEffect(() => {
     const bodyTheme = document.documentElement.attributes.getNamedItem("data-bs-theme");
@@ -155,12 +158,11 @@ function Navbar() {
             </li> */}
           </ul>
           {/* <div className="call-to-actions"> */}
-            { route !== "/derma"
+            { !excludedRoutes.includes(route)
             ?
-            <Link to="/derma" className="btn btn-primary me-3 disabled">
-              Derma Pantun
+            <Link to="/derma" className="btn btn-primary me-3">
+              <RDI /> Derma Pantun
               <br/>
-              {/* <span className="badge bg-secondary">Akan Datang</span> */}
             </Link>
             :
             <></>}
