@@ -1,6 +1,8 @@
 #lesen {
-    width: 45%;
+/*     width: 45%; */
     border: 1px solid #aaa;
     border-radius: 20px;
     padding: 20px;
+    margin: 20px;
+    max-width: 720px;
 }

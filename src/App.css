@@ -7,7 +7,7 @@
 
 /* TODO: potentially pushing HTML elements out of viewport, had to get rid of the class for Teroka and Sumber */
 .App-main {
-  height: 100%;
+/*   height: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
