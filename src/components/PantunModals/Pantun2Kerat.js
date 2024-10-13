@@ -30,7 +30,7 @@ function Pantun2Kerat() {
                                 <input
                                 type="text"
                                 class="form-control"
-                                placeholder="cth. Cempedak di luar pagar,"
+                                placeholder="cth. Siakap senohong gelama ikan duri,"
                                 aria-label="Bayang 1"
                                 aria-describedby="bayang1"
                                 name="bayang1"
@@ -42,7 +42,7 @@ function Pantun2Kerat() {
                                 <input
                                 type="text"
                                 class="form-control"
-                                placeholder="cth. Saya budak baharu belajar,"
+                                placeholder="cth. Bercakap bohong lama-lama mencuri."
                                 aria-label="Maksud 1"
                                 aria-describedby="maksud1"
                                 name="maksud1"
