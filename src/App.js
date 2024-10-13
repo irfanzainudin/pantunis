@@ -21,8 +21,8 @@ import Lesen from "./pages/Lesen";
 import Sasaran from "./pages/Sasaran";
 import PerkembanganTerkini from "./pages/PerkembanganTerkini";
 import HalamanHilang from "./pages/HalamanHilang";
-// SUMBANGAN
-// import Sumbang from "./pages/Sumbang";
+// DERMA
+// import Derma from "./pages/Derma";
 
 function App() {
   return (
@@ -58,8 +58,8 @@ function App() {
         {/* TEKA */}
         <Route path="/teka" element={<Teka />} />
         <Route path="/teka/kata" element={<TekaKata />} />
-        {/* SUMBANGAN */}
-        {/* <Route path="/sumbang" element={<Sumbang />} /> */}
+        {/* DERMA */}
+        {/* <Route path="/derma" element={<Derma />} /> */}
         {/* 404 */}
         <Route path="/*" element={<HalamanHilang />} />
       </Routes>

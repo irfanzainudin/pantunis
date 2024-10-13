@@ -1,7 +1,7 @@
-// Random Sumbangan Icon
+// Random Derma Icon
 import getRandomIntegerInclusive from "../utils/getRandomIntegerInclusive";
 
-function RandomSumbanganIcon() {
+function RandomDermaIcon() {
     // rid = Random ID
     const rid = getRandomIntegerInclusive(0, 2);
     
@@ -20,5 +20,5 @@ function RandomSumbanganIcon() {
     }
 }
 
-export default RandomSumbanganIcon;
+export default RandomDermaIcon;
   

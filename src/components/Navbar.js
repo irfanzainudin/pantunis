@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import RSI from "./RandomSumbanganIcon";
+import RSI from "./RandomDermaIcon";
 
 function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
-  // const route = useLocation().pathname;
+  const route = useLocation().pathname;
 
   useEffect(() => {
     const bodyTheme = document.documentElement.attributes.getNamedItem("data-bs-theme");
@@ -76,10 +76,10 @@ function Navbar() {
               </Link>
             </li> */}
             {/* <li>
-              <Link className="nav-link disabled" to="/sumbang">
+              <Link className="nav-link disabled" to="/derma">
                 <RSI />
                 {' '}
-                Sumbangan Pantun <span className="badge bg-secondary">Akan Datang</span>
+                Derma Pantun <span className="badge bg-secondary">Akan Datang</span>
               </Link>
             </li> */}
             <li className="nav-item dropdown">
@@ -155,15 +155,15 @@ function Navbar() {
             </li> */}
           </ul>
           {/* <div className="call-to-actions"> */}
-            {/* { route !== "/sumbang"
+            { route !== "/derma"
             ?
-            <Link to="/sumbang" className="btn btn-primary disabled">
-              Sumbangan Pantun
+            <Link to="/derma" className="btn btn-primary me-3 disabled">
+              Derma Pantun
               <br/>
-              <span className="badge bg-secondary">Akan Datang</span>
+              {/* <span className="badge bg-secondary">Akan Datang</span> */}
             </Link>
             :
-            <></>} */}
+            <></>}
             <div className="form-check form-switch form-check-reverse">
               <input
               className="form-check-input"
