@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import TerimaKasih from "../components/TerimaKasih";
 
 // TODO: I don't think we need this
 let headers = {
@@ -13,8 +14,10 @@ let headers = {
 };
 
 function PantunPage() {
-  const splitted = window.location.href.split('/');
-  const pid = splitted[splitted.length - 1];
+  const dashSplitted = window.location.href.split('/');
+  const splitted = dashSplitted[dashSplitted.length - 1].split('&');
+  const pid = splitted[0];
+  const just_added = splitted[1] || null;
   const [pantun, setPantun] = useState("");
   const [loading, setLoading] = useState(true);
 
@@ -27,7 +30,8 @@ function PantunPage() {
   const handleSubmit = () => {
     axios
       .get(
-        "https://pantunis-api.vercel.app/api/cariGunaID?id=" + pid,
+        // "https://pantunis-api.vercel.app/api/cariGunaID?id=" + pid,
+        "http://localhost:3001/cariGunaID?id=" + pid,
         headers
       )
       .then((response) => {
@@ -56,6 +60,12 @@ function PantunPage() {
   
   return (
     <main className="mt-3 animate__animated animate__fadeIn">
+      { just_added
+          ?
+        <TerimaKasih/>
+          :
+        <></>
+      }
       <h1 className="fs-4">Pantun #{pantun.pantun_id}</h1>
       {
       pantun.pantun_jenis === 4

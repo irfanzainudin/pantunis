@@ -160,8 +160,8 @@ function Navbar() {
           {/* <div className="call-to-actions"> */}
             { !excludedRoutes.includes(route)
             ?
-            <Link to="/derma" className="btn btn-primary me-3">
-              <RDI /> Derma Pantun
+            <Link to="/derma" className="btn btn-primary me-3 disabled">
+              <RDI /> Derma Pantun <span className="badge bg-secondary">Masih Testing...</span>
               <br/>
             </Link>
             :

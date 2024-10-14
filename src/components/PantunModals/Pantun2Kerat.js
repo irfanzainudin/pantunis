@@ -1,58 +1,98 @@
-import React from "react"
+import React, { useState } from "react";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+import "./PantunModal.css";
 
 function Pantun2Kerat() {
+    const [bayang1, setBayang1] = useState("");
+    const [maksud1, setMaksud1] = useState("");
+
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        const url = "http://localhost:3001/dermaPantun";
+        axios.post(url, {
+            bayang1: bayang1,
+            maksud1: maksud1,
+            sumber: 8,
+            jenis: 2
+        })
+        .then((res) => {
+            console.log(res);
+            document.querySelector('button#closePantun2KeratModal').click(); // close modal
+            navigate(`/pantun/${res.data[0]}&just_added=true`);
+        })
+        .catch((e) => {
+            console.log(`There was an error making a POST request to /dermaPantun: ${e}`);
+        })
+    }
+
+    const handleBayang1 = (e) => {
+        setBayang1(e.target.value);
+    }
+
+    const handleMaksud1 = (e) => {
+        setMaksud1(e.target.value);
+    }
+    
     return (
         // <!-- Modal Pantun 2-Kerat -->
         <div
-        class="modal fade"
+        className="modal fade"
         id="pantun2kerat"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="pantun2keratLabel"
         aria-hidden="true"
         >
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="pantun2keratLabel">
-                        <i class="bi bi-pencil-square text-primary"></i> Sumbang
+            <div className="modal-dialog">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <h1 className="modal-title fs-5" id="pantun2keratLabel">
+                            <i className="bi bi-pencil-square text-primary"></i> Sumbang
                         </h1>
                         <button
                         type="button"
-                        class="btn-close"
+                        className="btn-close"
                         data-bs-dismiss="modal"
                         aria-label="Close"
+                        id="closePantun2KeratModal"
                         ></button>
                     </div>
-                    <div class="modal-body">
-                        <form method="post" action="{% url 'sumbang_pantun' %}">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="bayang1"> Bayang 1 </span>
+                    <div className="modal-body">
+                        <form onSubmit={handleSubmit}>
+                            <div className="input-group mb-3">
+                                <span className="input-group-text" id="bayang1"> Bayang 1 </span>
                                 <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 placeholder="cth. Siakap senohong gelama ikan duri,"
                                 aria-label="Bayang 1"
                                 aria-describedby="bayang1"
                                 name="bayang1"
+                                onChange={handleBayang1}
+                                defaultValue={bayang1}
                                 required
                                 />
                             </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="maksud1"> Maksud 1 </span>
+                            <div className="input-group mb-3">
+                                <span className="input-group-text" id="maksud1"> Maksud 1 </span>
                                 <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 placeholder="cth. Bercakap bohong lama-lama mencuri."
                                 aria-label="Maksud 1"
                                 aria-describedby="maksud1"
                                 name="maksud1"
+                                onChange={handleMaksud1}
+                                defaultValue={maksud1}
                                 required
                                 />
                             </div>
-                            {/* <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text" id="maksud2"> License </span>
+                            {/* <div className="input-group input-group-sm mb-3">
+                                <span className="input-group-text" id="maksud2"> License </span>
                                 <select
-                                class="form-select form-select-sm"
+                                className="form-select form-select-sm"
                                 aria-label="License for pantun"
                                 >
                                 <option value="fu" selected>Free use for all</option>
@@ -61,20 +101,15 @@ function Pantun2Kerat() {
                                 <option value="nl">No license</option>
                                 </select>
                             </div> */}
-                            <input type="number" value="2" name="jenis" hidden />
-                            <input type="number" value="5" name="sumber" hidden />
-                            <input type="submit" class="btn btn-primary" value="Sumbang" />
+                            <input type="number" value="2" name="jenis" hidden readOnly />
+                            <input type="number" value="5" name="sumber" hidden readOnly />
+                            <input type="submit" className="btn btn-primary" value="Sumbang" />
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        {/* <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                        ></button> */}
-                        {/* <small>Every pantun will be licensed as "All rights reserved <i className="bi bi-c-circle"></i>" meaning you, the writer(s), the pemantun(s), own(s) the pantun. In a future update, we will allow the change of license to other licenses such as <a href="https://fairuse.stanford.edu/overview/public-domain/welcome/">the public domain</a> or <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a> if you ever wish to change it.</small> */}
-                        <small>Setiap pantun yang diderma akan dilesenkan sebagai "Hakcipta Terpelihara <i className="bi bi-c-circle"></i>" yang bermaksud pantun tersebut hak milik mutlak penulis. Ke depan, kami akan membuka ruang untuk penukaran lesen kepada <a href="https://ms.wikipedia.org/wiki/Domain_awam">domain awam</a> atau <a href="https://ms.wikipedia.org/wiki/Lesen_Creative_Commons">Lesen Creative Commons</a> jika anda mahu.</small>
+                    <div className="modal-footer">
+                        <small>Setiap pantun adalah hak milik mutlak penulis. Untuk info lebih tentang bagaimana Pantunis menghormati hakcipta penulis pantun, <Link to="/notislesen" onClick={() => {
+                            document.querySelector('button#closePantun2KeratModal').click(); // close modal
+                        }}>rujuk sini</Link>.</small>
                     </div>
                 </div>
             </div>

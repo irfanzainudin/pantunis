@@ -24,6 +24,7 @@ import HalamanHilang from "./pages/HalamanHilang";
 // DERMA
 import Derma from "./pages/Derma";
 import Tetamu from "./pages/Tetamu";
+import NotisLesen from "./pages/NotisLesen";
 import LogMasuk from "./pages/LogMasuk";
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
         {/* DERMA */}
         <Route path="/derma" element={<Derma />} />
         <Route path="/tetamu" element={<Tetamu />} />
+        <Route path="/notislesen" element={<NotisLesen />} />
         <Route path="/logmasuk" element={<LogMasuk />} />
         {/* 404 */}
         <Route path="/*" element={<HalamanHilang />} />

@@ -8,6 +8,7 @@ import MP from "../media/MalayPantuns.png";
 import SP from "../media/SejutaPantun.png";
 import BM from "../media/BudayaMelayu.png";
 import In from "../media/Internet.png";
+import SuPa from "../media/SumberPantunis.png";
 
 const sumber_sumber = [
   {
@@ -69,13 +70,14 @@ const sumber_sumber = [
   //     "https://www.nutmegpublishing.com/books/other-books/alam-pantun-melayu.html",
   //   imej: "https://www.nutmegpublishing.com/img/other-books/alam-pantun.jpg",
   // },
-  // {
-  //   tajuk: "iPantun",
-  //   penulis: "Netizen",
-  //   pautan: "https://www.ipantun.com/",
-  //   imej: In,
-  //   nota: "draft",
-  // },
+  {
+    id: "8",
+    tajuk: "Sumbangan nirnama",
+    penulis: "",
+    pautan: "/sumber/teroka/sumbangan-nirnama",
+    imej: SuPa,
+    nota: "published",
+  },
 ];
 
 function Sumber() {

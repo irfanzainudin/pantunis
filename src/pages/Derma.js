@@ -6,7 +6,7 @@ function Derma() {
   return (
     <main className="donation-mode">
         <h1><RandomDermaIcon/> Derma Pantun</h1>
-        <p>Tolong pilih jenis dermaan anda.</p>
+        <p>Tolong pilih jenis sumbangan anda.</p>
         <div className="donation-options">
           <div>
             <Link to="/tetamu" className="btn btn-lg btn-primary " id="tetamu-link">
