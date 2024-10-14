@@ -2,10 +2,10 @@ import "./Lesen.css";
 
 function Lesen() {
     return (
-      <main className="App-main animate__animated animate__fadeIn">
+      <main className="container mt-3 animate__animated animate__fadeIn">
         <h1>Lesen</h1>
         <p>Rujuk kod sumber di <a href="https://github.com/irfanzainudin/pantunis">repositori <i className="bi bi-github"></i> Github rasmi Pantunis</a>.</p>
-        <article id="lesen">
+        <article id="lesen" className="container w-75">
             <p>
                 Copyright {new Date().getFullYear()} <i className="bi bi-c-circle"></i> Perisiana
             </p>
