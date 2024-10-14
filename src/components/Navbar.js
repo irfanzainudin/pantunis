@@ -180,7 +180,7 @@ function Navbar() {
                 }
               }}
               />
-              <label className="form-check-label" for="flexSwitchCheckReverse">
+              <label className="form-check-label" htmlFor="flexSwitchCheckReverse">
                 {
                 darkMode
                 ?
