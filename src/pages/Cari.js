@@ -34,8 +34,7 @@ function Cari() {
   const handleSubmit = () => {
     axios
       .get(
-        // "https://pantunis-api.vercel.app/api/cariGunaKata?kata=" + kata
-        "http://localhost:3001/cariGunaKata?kata=" + kata
+        "https://pantunis-api.vercel.app/api/cariGunaKata?kata=" + kata
       )
       .then((response) => {
         // Update the pantun state
