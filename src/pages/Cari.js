@@ -5,16 +5,6 @@ import { useSearchParams } from "react-router-dom";
 import "./Cari.css";
 import getRandomIntegerInclusive from "../utils/getRandomIntegerInclusive";
 
-// TODO: I don't think we need this
-// let headers = {
-//   "Access-Control-Allow-Credentials": true,
-//   "Access-Control-Allow-Origin": "https://pantunis-api.vercel.app/",
-//   Vary: "Origin",
-//   "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-//   "Access-Control-Allow-Headers":
-//     "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
-// };
-
 function Cari() {
   const sp = useSearchParams();
   const kata = sp[0].get("kata");
@@ -34,7 +24,7 @@ function Cari() {
   const handleSubmit = () => {
     axios
       .get(
-        "https://pantunis-api.vercel.app/api/cariGunaKata?kata=" + kata
+        "https://api.pantunis.com/cariGunaKata?kata=" + kata
       )
       .then((response) => {
         // Update the pantun state

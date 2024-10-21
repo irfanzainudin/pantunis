@@ -4,16 +4,6 @@ import Pantun from "../components/Pantun";
 import { useSearchParams } from "react-router-dom";
 import "./Cari.css";
 
-// TODO: I don't think we need this
-let headers = {
-  "Access-Control-Allow-Credentials": true,
-  "Access-Control-Allow-Origin": "https://pantunis-api.vercel.app/",
-  Vary: "Origin",
-  "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-  "Access-Control-Allow-Headers":
-    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
-};
-
 function CarianTepat() {
   const sp = useSearchParams();
   const kata = sp[0].get("kata");
@@ -33,8 +23,7 @@ function CarianTepat() {
   const handleSubmit = () => {
     axios
       .get(
-        "https://pantunis-api.vercel.app/api/cariGunaKataTepat?kata=" + kata,
-        headers
+        "https://api.pantunis.com/cariGunaKataTepat?kata=" + kata
       )
       .then((response) => {
         // Update the pantun state

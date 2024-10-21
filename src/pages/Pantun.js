@@ -3,16 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import TerimaKasih from "../components/TerimaKasih";
 
-// TODO: I don't think we need this
-let headers = {
-  "Access-Control-Allow-Credentials": true,
-  "Access-Control-Allow-Origin": "https://pantunis-api.vercel.app/",
-  Vary: "Origin",
-  "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-  "Access-Control-Allow-Headers":
-    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
-};
-
 function PantunPage() {
   const dashSplitted = window.location.href.split('/');
   const splitted = dashSplitted[dashSplitted.length - 1].split('&');
@@ -30,9 +20,7 @@ function PantunPage() {
   const handleSubmit = () => {
     axios
       .get(
-        // "https://pantunis-api.vercel.app/api/cariGunaID?id=" + pid,
-        "http://localhost:3001/cariGunaID?id=" + pid,
-        headers
+        "https://api.pantunis.com/cariGunaID?id=" + pid
       )
       .then((response) => {
         // Update the pantun state
