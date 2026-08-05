@@ -26,6 +26,8 @@ import Derma from "./pages/Derma";
 import Tetamu from "./pages/Tetamu";
 import NotisLesen from "./pages/NotisLesen";
 import LogMasuk from "./pages/LogMasuk";
+// Bookshelf
+import BookshelfShelfDemo from "./pages/BookshelfShelfDemo";
 
 function App() {
   return (
@@ -66,6 +68,8 @@ function App() {
         <Route path="/tetamu" element={<Tetamu />} />
         <Route path="/notislesen" element={<NotisLesen />} />
         <Route path="/logmasuk" element={<LogMasuk />} />
+        {/* Bookshelf */}
+        <Route path="/bs" element={<BookshelfShelfDemo/>} />
         {/* 404 */}
         <Route path="/*" element={<HalamanHilang />} />
       </Routes>
